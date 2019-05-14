@@ -1,4 +1,11 @@
 @Library('dronedeploy@0.0.11') _
+
+properties([
+  parameters(
+    [string(name: 'branch', defaultValue: 'master', description: 'Branch name for environment deploy: master (test) or prod')]
+  ),
+])
+
 node ('linux'){
   timestamps {
     try {
@@ -11,10 +18,11 @@ node ('linux'){
             sh "make -e package"
         }
         stage ('Publish'){
+          echo "Deploying ${params.branch}"
           step([$class: 'S3BucketPublisher',
                 dontWaitForConcurrentBuildCompletion: true,
                 entries: [[
-                              bucket: 'drone-deploy-artifacts/developer-site/' + env.BRANCH_NAME,
+                              bucket: "drone-deploy-artifacts/developer-site/${params.branch}",
                               excludedFile: '',
                               flatten: false,
                               gzipFiles: true,
@@ -35,10 +43,10 @@ node ('linux'){
     } catch (e) {
       currentBuild.result = "FAILED"
 
-      if (["master", "stage", "prod"].contains(env.BRANCH_NAME)) {
+      if (["master", "stage", "prod"].contains(params.branch)) {
         slackSend (
           channel: '#backend-guild', color: '#FF0000', teamDomain: 'dronedeploy',
-          message: "@platform-engineers: DroneDeploy documentation branch \"${env.BRANCH_NAME}\" has failed. <${env.BUILD_URL}console|Details.>"
+          message: "@platform-engineers: DroneDeploy documentation branch \"${params.branch}\" has failed. <${env.BUILD_URL}console|Details.>"
         )
       }
       throw e
