@@ -12,6 +12,19 @@
 
 * [Exporter.list](#exporterlist)
 
+**Exporter.getSelectedAutoExportParams**
+
+* [Exporter.getSelectedAutoExportParams](#exportergetselectedautoexportparams)
+
+**Exporter.createAutoExport**
+
+* [Exporter.createAutoExport](#exportercreateautoexport)
+
+**Exporter.closePopup**
+
+* [Exporter.closePopup](#exporterclosepopup)
+
+
 ## Exporter.send
 
 ### Orthomosaic Export
@@ -238,5 +251,86 @@ dronedeployApi.Exporter.list({planId: '5803c075d0ec0a44f0a75a86'})
 
 [**Full Example**](/exporter/example-exporter.get3dmodellink.md)
 
+## Exporter.getSelectedAutoExportParams
+
+**Overview**
+
+Gets selected parameters from Auto Exports form. Right now it returns only fileFormat.
+
+**Example Call**
+
+```javascript
+dronedeployApi.Exporter.getSelectedAutoExportParams()
+  .then((autoExportParams) => console.log(autoExportParams));
+```
+
+**Example Response**
+
+```javascript
+{
+  fileFormat: "geotiff"
+}
+```
+
+[**Full Example**](/exporter/example-exporter.getselectedautoexportparams.md)
 
 
+## Exporter.createAutoExport
+
+**Overview**
+
+Creates new auto export setting.
+
+**Example Call**
+
+```javascript
+const folderConfig = { folderId: 'folderId' }; // folderConfig may contain other properties
+dronedeployApi.Exporter.createAutoExport(folderEndpoint = 'https://fake-folder-endpoint', folderConfig)
+  .then((autoExportSetting) => console.log(autoExportSetting));
+```
+
+**Example Response**
+
+```javascript
+{
+  application: {
+    id: "Application:sdjncksnckd"
+    __typename: "Application"
+  }
+  dateCreation: "2019-06-03T06:35:10.974000+00:00"
+  exportParameters: {
+    emails: []
+    fileFormat: "GEO_TIFF"
+    layer: "ORTHOMOSAIC"
+    merge: true
+    projection: 3857
+    resolution: 0
+    __typename: "ExportParameters"
+  }
+  folderConfig: "{\"folder_id\": \"o9xcfDvir_dRpEwidj8LbPk\"}"
+  folderEndpoint: "https://dronedeployfunctions.com/fn-5cb9adc213a75800015a/folder-to-upload"
+  id: "AutoExportSetting:5cf4bf9e5c9f8500017b86d0"
+  project: {
+    id: "Project:123ABC456XYZ"
+    __typename: "Project"
+  }
+  __typename: "AutoExportSetting"
+}
+```
+
+[**Full Example**](/exporter/example-exporter.createautoexport.md)
+
+
+## Exporter.closePopup
+
+**Overview**
+
+Closes popup window with Auto Exports explorer and effectivelly stops the app that invoke this method.
+
+**Example Call**
+
+```javascript
+dronedeployApi.Exporter.closePopup();
+```
+
+[**Full Example**](/exporter/example-exporter.closepopup.md)
