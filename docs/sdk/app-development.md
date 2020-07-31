@@ -153,8 +153,6 @@ Once your Function has been deployed, you can check its status by running:
 
 Running functions locally is extremely simple using Google's [functions-framework](https://cloud.google.com/functions/docs/functions-framework).
 
-        $ npm install @google-cloud/functions-framework
-
 cd into your actual function folder
 
         $ npm install @google-cloud/functions-framework
