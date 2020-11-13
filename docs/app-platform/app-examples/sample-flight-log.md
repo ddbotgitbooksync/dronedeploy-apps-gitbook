@@ -2,7 +2,11 @@
 
 This is our latest specification for flight logs. Our support for any other version of flight logs are depricated. If you received a flight log from customer that is not upto this specification, we recommend that you notify users with some messaging that an older version of flight log was used.
 
-## Download our sample flight log [here](https://www.dropbox.com/s/922zzgckavrmevn/587936ec02c50e25fa9cf365_2017-01-13-202254-159_2017-01-13-202714-779.log?dl=0).
+## Download our sample flight log
+
+{% file src="../../.gitbook/assets/example\_plan\_2020-11-13-011622-444.log" caption="Example Flight Log" %}
+
+
 
 ## File Name Convention
 
