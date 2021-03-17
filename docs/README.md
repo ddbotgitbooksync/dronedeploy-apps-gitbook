@@ -6,7 +6,7 @@ Once a user installs an app it will run on DroneDeploy.com, Android and iOS Dron
 
 ## Watch Build an App in Two Minutes Video
 
-{% youtube %} https://youtu.be/xieC4o5JEUs?list=PLqOge_z8yN2EJ4ftDaY1XdbaneCRQTnvq {% endyoutube %}
+{% youtube src="https://youtu.be/xieC4o5JEUs?list=PLqOge_z8yN2EJ4ftDaY1XdbaneCRQTnvq" %}{% endyoutube %}
 
 ### How to Quickly Get Started
 1. Download a [simple example](https://s3.amazonaws.com/drone-deploy-plugins/templates/dronedeploy-app-hello-world.zip) or [full example](https://s3.amazonaws.com/drone-deploy-plugins/templates/dronedeploy-expand-example.zip) of an app template and unzip the folder.
