@@ -20,7 +20,7 @@
 
 9. [ ] I have tested my app on iOS or Android device?
 
-10. [ ] My app includes the [success condition tracking](https://dronedeploy.gitbooks.io/dronedeploy-apps/content/success-condition)?
+10. [ ] My app includes the [success condition tracking](https://developer-docs.dronedeploy.com/app-platform/platform-policy/success-condition)?
 
 ## Marketing
 
