@@ -60,7 +60,7 @@ Developer revenue share payments are aggregated and sent at the end of the month
 2. International Developers (entities)
 3. International Developers (individuals)
 
-Developers are paid via bank transfer. Please contact the DroneDeploy Developer Team at [developer@dronedeploy.com](https://github.com/ddbotgitbooksync/dronedeploy-apps-gitbook/tree/c927048f33aac44c8e61d230dc43194aca71784c/docs/developer@dronedeploy.com) to request the proper form and get set up for monetization.
+Developers are paid via bank transfer. Please contact the DroneDeploy Developer Team at [support@dronedeploy.com](https://github.com/ddbotgitbooksync/dronedeploy-apps-gitbook/tree/c927048f33aac44c8e61d230dc43194aca71784c/docs/developer@dronedeploy.com) to request the proper form and get set up for monetization.
 
 ## How much is the revenue share?
 
