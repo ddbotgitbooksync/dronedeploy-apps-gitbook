@@ -76,4 +76,4 @@ Go [visit the App Developer Forum](http://forum.dronedeploy.com/) to see which a
 
 ## How can I get general developer support?
 
-Contact the DroneDeploy Developer Team at <mark style="color:blue;">support</mark>[@dronedeploy.com](https://github.com/ddbotgitbooksync/dronedeploy-apps-gitbook/tree/c927048f33aac44c8e61d230dc43194aca71784c/docs/developer@dronedeploy.com)
+Contact the DroneDeploy Developer Team at support@dronedeploy.com
