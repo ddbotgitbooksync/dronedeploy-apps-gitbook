@@ -17,24 +17,7 @@ Creating a Datastore table is straightforward. You use a [GraphQL mutation query
 2. **name**: This will be the name of your table.
 3. **description**: This is a description you give about the table.
 
-[**Try it out with the GraphQL Explorer**](https://www.dronedeploy.com/graphql?operationName=CreateTable&query=mutation%20CreateTable%28%24input%3A%20CreateTableInput!%29%20{
-%20%20createTable%28input%3A%20%24input%29%20{
-%20%20%20%20table%20{
-%20%20%20%20%20%20id
-%20%20%20%20%20%20application%20{
-%20%20%20%20%20%20%20%20id
-%20%20%20%20%20%20}
-%20%20%20%20%20%20name
-%20%20%20%20%20%20description
-%20%20%20%20}
-%20%20}
-}&variables={
-%20%20"input"%3A%20{
-%20%20%20%20"applicationId"%3A%20"Application%3Alonvecnbfyvovfqsvbxz"%2C
-%20%20%20%20"name"%3A%20"Table%20Name"%2C
-%20%20%20%20"description"%3A%20"Table%20Description"
-%20%20}
-})
+[**Try it out with the GraphQL Explorer**](https://www.dronedeploy.com/graphql?operationName=CreateTable\&query=mutation%20CreateTable\(%24input%3A%20CreateTableInput!\)%20%7B%0A%20%20createTable\(input%3A%20%24input\)%20%7B%0A%20%20%20%20table%20%7B%0A%20%20%20%20%20%20id%0A%20%20%20%20%20%20application%20%7B%0A%20%20%20%20%20%20%20%20id%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20name%0A%20%20%20%20%20%20description%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D\&variables=%7B%0A%20%20%22input%22%3A%20%7B%0A%20%20%20%20%22applicationId%22%3A%20%22Application%3Alonvecnbfyvovfqsvbxz%22%2C%0A%20%20%20%20%22name%22%3A%20%22Table%20Name%22%2C%0A%20%20%20%20%22description%22%3A%20%22Table%20Description%22%0A%20%20%7D%0A%7D)
 
 #### Query
 
@@ -101,30 +84,7 @@ Creating a column is very similar to creating the table itself. You use a GraphQ
 
 Note that certain column types have specific inputs. For example, for the TEXT column type, you can specify `textLength` and even whether or not you want that column to be `textEncrypted`.
 
-[**Try it out with the GraphQL Explorer**](https://www.dronedeploy.com/graphql?operationName=CreateTableColumn&query=mutation%20CreateTableColumn%28%24input%3A%20CreateTableColumnInput!%29%20{
-%20%20createTableColumn%28input%3A%20%24input%29%20{
-%20%20%20%20tableColumn%20{
-%20%20%20%20%20%20id
-%20%20%20%20%20%20name
-%20%20%20%20%20%20description
-%20%20%20%20%20%20...%20on%20NumberColumn%20{
-%20%20%20%20%20%20%20%20type
-%20%20%20%20%20%20}
-%20%20%20%20%20%20...%20on%20TextColumn%20{
-%20%20%20%20%20%20%20%20length
-%20%20%20%20%20%20}
-%20%20%20%20}
-%20%20}
-}&variables={
-%20%20"input"%3A%20{
-%20%20%20%20"columnType"%3A%20"TEXT"%2C
-%20%20%20%20"name"%3A%20"name"%2C
-%20%20%20%20"textLength"%3A%20255%2C
-%20%20%20%20"textEncrypted"%3A%20false%2C
-%20%20%20%20"tableId"%3A%20"Table%3A5b6bd03d0461f4000108c777"%2C
-%20%20%20%20"description"%3A%20"Users%20name"
-%20%20}
-})
+[**Try it out with the GraphQL Explorer**](https://www.dronedeploy.com/graphql?operationName=CreateTableColumn\&query=mutation%20CreateTableColumn\(%24input%3A%20CreateTableColumnInput!\)%20%7B%0A%20%20createTableColumn\(input%3A%20%24input\)%20%7B%0A%20%20%20%20tableColumn%20%7B%0A%20%20%20%20%20%20id%0A%20%20%20%20%20%20name%0A%20%20%20%20%20%20description%0A%20%20%20%20%20%20...%20on%20NumberColumn%20%7B%0A%20%20%20%20%20%20%20%20type%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20...%20on%20TextColumn%20%7B%0A%20%20%20%20%20%20%20%20length%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D\&variables=%7B%0A%20%20%22input%22%3A%20%7B%0A%20%20%20%20%22columnType%22%3A%20%22TEXT%22%2C%0A%20%20%20%20%22name%22%3A%20%22name%22%2C%0A%20%20%20%20%22textLength%22%3A%20255%2C%0A%20%20%20%20%22textEncrypted%22%3A%20false%2C%0A%20%20%20%20%22tableId%22%3A%20%22Table%3A5b6bd03d0461f4000108c777%22%2C%0A%20%20%20%20%22description%22%3A%20%22Users%20name%22%0A%20%20%7D%0A%7D)
 
 #### Query
 
@@ -186,22 +146,7 @@ Now that you have a Datastore table, you can store your own custom data! Similar
 
 The inputs to this query are as follows: 1. **externalId**: This is the Id of the data that you can use to reference and retrieve it later. **NOTE: There is a 36 character limit to this field.** 1. **tableId**: This is the Id of the table you created above. 1. **data**: This is the data you want to store in stringified JSON format. Note that each Datastore table column is a JSON key. In this example, that would be the `name` column.
 
-[**Try it out with the GraphQL Explorer**](https://www.dronedeploy.com/graphql?query=query%20%28%24tableId%3A%20ID!%2C%20%24externalId%3A%20String!%29%20{
-%20%20node%28id%3A%20%24tableId%29%20{
-%20%20%20%20...%20on%20Table%20{
-%20%20%20%20%20%20tableDatum%28externalKey%3A%20%24externalKey%29%20{
-%20%20%20%20%20%20%20%20data
-%20%20%20%20%20%20}
-%20%20%20%20}
-%20%20}
-}
-&variables={
-%20%20"input"%3A%20{
-%20%20%20%20"tableId"%3A%20"Table%3A5b6be66f23d50900018b7731"%2C%20
-%20%20%20%20"externalId"%3A%20"developer%40dronedeploy.com"%2C%20
-%20%20%20%20"data"%3A%20"{%20\"name\"%3A%20\"DroneDeploy%20Developer\"%20}"
-%20%20}
-}&operationName=null)
+[**Try it out with the GraphQL Explorer**](https://www.dronedeploy.com/graphql?query=query%20\(%24tableId%3A%20ID!%2C%20%24externalId%3A%20String!\)%20%7B%0A%20%20node\(id%3A%20%24tableId\)%20%7B%0A%20%20%20%20...%20on%20Table%20%7B%0A%20%20%20%20%20%20tableDatum\(externalKey%3A%20%24externalKey\)%20%7B%0A%20%20%20%20%20%20%20%20data%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A\&variables=%7B%0A%20%20%22input%22%3A%20%7B%0A%20%20%20%20%22tableId%22%3A%20%22Table%3A5b6be66f23d50900018b7731%22%2C%20%0A%20%20%20%20%22externalId%22%3A%20%22developer%40dronedeploy.com%22%2C%20%0A%20%20%20%20%22data%22%3A%20%22%7B%20%5C%22name%5C%22%3A%20%5C%22DroneDeploy%20Developer%5C%22%20%7D%22%0A%20%20%7D%0A%7D\&operationName=null)
 
 #### Query
 
@@ -228,7 +173,7 @@ mutation CreateTableData($input: CreateTableDataInput!) {
 ```javascript
 {
   "input": {
-    "externalId": "developer@dronedeploy.com",
+    "externalId": "me@example.com",
     "tableId": "Table:5b6bd03d0461f4000108c777",
     "data": "{ \"name\": \"DroneDeploy Developer\" }"
   }
@@ -249,7 +194,7 @@ The results should look something like this.
           "id": "Application:lonvecnbfyvovfqsvbxz"
         },
         "data": "{\"name\": \"DroneDeploy Developer\"}",
-        "externalKey": "developer@dronedeploy.com",
+        "externalKey": "me@example.com",
         "table": {
           "id": "Table:5b6bd03d0461f4000108c777"
         }
@@ -265,24 +210,9 @@ Now let's retrieve the data that we created. There are 3 different approaches to
 
 ### Retreiving data by external key
 
-This query takes two inputs: 1. **externalKey**: This is the externalId that you passed into the Datastore data creation query. In this example, this was `developer@dronedeploy.com`. 1. **tableId**: This is the Id of the table you created above.
+This query takes two inputs: 1. **externalKey**: This is the externalId that you passed into the Datastore data creation query. In this example, this was me@example.com. 1. **tableId**: This is the Id of the table you created above.
 
-[**Try it out with the GraphQL Explorer**](https://www.dronedeploy.com/graphql?query=query%20%28%24tableId%3A%20ID!%2C%20%24externalId%3A%20String!%29%20{
-%20%20node%28id%3A%20%24tableId%29%20{
-%20%20%20%20...%20on%20Table%20{
-%20%20%20%20%20%20tableDatum%28externalKey%3A%20%24externalKey%29%20{
-%20%20%20%20%20%20%20%20data
-%20%20%20%20%20%20}
-%20%20%20%20}
-%20%20}
-}
-&variables={
-%20%20"input"%3A%20{
-%20%20%20%20"externalId"%3A%20"developer%40dronedeploy.com"%2C
-%20%20%20%20"tableId"%3A%20"Table%3A5b6be66f23d50900018b7731"%2C
-%20%20%20%20"data"%3A%20"{%20\"name\"%3A%20\"DroneDeploy%20Developer\"%20}"
-%20%20}
-}&operationName=null)
+[**Try it out with the GraphQL Explorer**](https://www.dronedeploy.com/graphql?query=query%20\(%24tableId%3A%20ID!%2C%20%24externalId%3A%20String!\)%20%7B%0A%20%20node\(id%3A%20%24tableId\)%20%7B%0A%20%20%20%20...%20on%20Table%20%7B%0A%20%20%20%20%20%20tableDatum\(externalKey%3A%20%24externalKey\)%20%7B%0A%20%20%20%20%20%20%20%20data%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A\&variables=%7B%0A%20%20%22input%22%3A%20%7B%0A%20%20%20%20%22externalId%22%3A%20%22developer%40dronedeploy.com%22%2C%0A%20%20%20%20%22tableId%22%3A%20%22Table%3A5b6be66f23d50900018b7731%22%2C%0A%20%20%20%20%22data%22%3A%20%22%7B%20%5C%22name%5C%22%3A%20%5C%22DroneDeploy%20Developer%5C%22%20%7D%22%0A%20%20%7D%0A%7D\&operationName=null)
 
 #### Query
 
@@ -303,7 +233,7 @@ query ($tableId: ID!, $externalKey: String!) {
 ```javascript
 {
   "tableId": "Table:5b6bd03d0461f4000108c777",
-  "externalKey": "developer@dronedeploy.com"
+  "externalKey": "me@example.com"
 }
 ```
 
@@ -325,7 +255,7 @@ The results should look something like this.
 
 ### Retreiving all table data
 
-You can retreve all of the data from the table by using the `TableDataConnection` object. Like any standard Relay Connection, you can supply different paging parameters to retrieve a slice of the data \(i.e. for displaying rows in a grid\).
+You can retreve all of the data from the table by using the `TableDataConnection` object. Like any standard Relay Connection, you can supply different paging parameters to retrieve a slice of the data (i.e. for displaying rows in a grid).
 
 This query takes three inputs: 1. **tableId**: The ID of the table 1. **first**: The first N records 1. **after**: The ID of the record to start returning
 
@@ -404,7 +334,7 @@ The results should look something like this.
 
 ### Selecting data using SQL
 
-Sometimes you need to select data from your tables by querying columns other than external keys. Datastore provides the ability to use a subset of standard ANSI-92 SQL to query your tables. Let's assume that we've created two columns on our table - name \(a string field\) and age \(a number field that is an integer\). To query that field, you would populate the `query` parameter of the `TableDataConnection` object:
+Sometimes you need to select data from your tables by querying columns other than external keys. Datastore provides the ability to use a subset of standard ANSI-92 SQL to query your tables. Let's assume that we've created two columns on our table - name (a string field) and age (a number field that is an integer). To query that field, you would populate the `query` parameter of the `TableDataConnection` object:
 
 #### Query
 
@@ -475,44 +405,43 @@ As mentioned above, a subset of standard SQL is allowed. The following describes
 _Comparison Operators_
 
 | Operator | Supported |
-| :--- | :--- |
-| = | Yes |
-| != | Yes |
-| &lt;&gt; | Yes |
-| &gt; | Yes |
-| &lt; | Yes |
-| =&lt; | Yes |
-| &gt;= | Yes |
-| !&lt; | No |
-| &gt;! | No |
+| -------- | --------- |
+| =        | Yes       |
+| !=       | Yes       |
+| <>       | Yes       |
+| >        | Yes       |
+| <        | Yes       |
+| =<       | Yes       |
+| >=       | Yes       |
+| !<       | No        |
+| >!       | No        |
 
 _Logical Operators_
 
 | Operator | Supported |
-| :--- | :--- |
-| ALL | No |
-| AND | Yes |
-| ANY | No |
-| BETWEEN | Yes |
-| EXISTS | No |
-| IN | Yes |
-| LIKE | Yes |
-| NOT | Yes |
-| OR | Yes |
-| IS NULL | Yes |
-| UNIQUE | No |
+| -------- | --------- |
+| ALL      | No        |
+| AND      | Yes       |
+| ANY      | No        |
+| BETWEEN  | Yes       |
+| EXISTS   | No        |
+| IN       | Yes       |
+| LIKE     | Yes       |
+| NOT      | Yes       |
+| OR       | Yes       |
+| IS NULL  | Yes       |
+| UNIQUE   | No        |
 
 _Arithmetic Operators_
 
 | Operator | Supported |
-| :--- | :--- |
-| + | No |
-| - | No |
-| \* | No |
-| / | No |
+| -------- | --------- |
+| +        | No        |
+| -        | No        |
+| \*       | No        |
+| /        | No        |
 
 #### Limitations
 
 * Subselects, joins, and aggregate functions are not currently supported.
 * You cannot run a query against an encrypted column
-
