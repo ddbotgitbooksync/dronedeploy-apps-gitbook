@@ -6,7 +6,7 @@ DroneDeploy's UI Kit is vastly composed of Material Design components. To start 
 
 ### CSS
 
-```text
+```
 <!-- Compiled and minified Materialized CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 
@@ -20,7 +20,7 @@ DroneDeploy's UI Kit is vastly composed of Material Design components. To start 
 
 Next we have to setup the HTML file structure to include all the necessary CSS and JS files.
 
-```text
+```
  <!DOCTYPE html>
   <html>
     <head>
@@ -40,5 +40,4 @@ Next we have to setup the HTML file structure to include all the necessary CSS a
 
 ## Documentation
 
-To quickly get started download one of our [templates](http://dronedeploy.gitbooks.io/dronedeploy-apps/content/template.html) or review our documentation in detail.
-
+To quickly get started download one of our [templates](template.md) or review our documentation in detail.

@@ -4,11 +4,11 @@ Most of DroneDeploy's components follow Material Design guidelines.
 
 ## Input Fields
 
-The `.input-field` allow users to input data. The bottom border of the input field should light up on focus with our blue brand color, hex: \#2196F3.
+The `.input-field` allow users to input data. The bottom border of the input field should light up on focus with our blue brand color, hex: `#2183f3`.
 
-![](../../.gitbook/assets/username-password.jpg)
+![](../../../.gitbook/assets/username-password.jpg)
 
-```text
+```
 <div class="row">
   <div class="input-field col-4">
     <input type="text" class="validate">
@@ -25,11 +25,11 @@ The `.input-field` allow users to input data. The bottom border of the input fie
 
 ## Error Messaging
 
-By adding `data-error` as an attribute and the .invalid class to your &lt;div&gt; and &lt;input&gt; you can add custom messaging to your input field label.
+By adding `data-error` as an attribute and the .invalid class to your \<div> and \<input> you can add custom messaging to your input field label.
 
-![](../../.gitbook/assets/data-error-input-md.jpg)
+![](../../../.gitbook/assets/data-error-input-md.jpg)
 
-```text
+```
 <div class="row">
   <div class="input-field invalid col-4" data-error="wrong">
     <input id="email" type="email" class="invalid">
@@ -42,9 +42,9 @@ By adding `data-error` as an attribute and the .invalid class to your &lt;div&gt
 
 By adding a .valid class to your input field you can highlight the border of the input with green, indicating success.
 
-## ![](../../.gitbook/assets/success-input.jpg)
+## ![](../../../.gitbook/assets/success-input.jpg)
 
-```text
+```
 <div class="row">
   <div class="input-field invalid col-4" data-error="Invalid email">
   <input id="email" type="email" class="invalid">
@@ -57,9 +57,9 @@ By adding a .valid class to your input field you can highlight the border of the
 
 A textarea should be used when there are multiple lines of content that needs to be added. The textarea input height is liquid and will re-size according to the amount of content.
 
-![](../../.gitbook/assets/textarea-input-md.jpg)
+![](../../../.gitbook/assets/textarea-input-md.jpg)
 
-```text
+```
   <div class="row">
     <div class="input-field col-4">
       <textarea id="textarea1" class="materialize-textarea"></textarea>
@@ -72,9 +72,9 @@ A textarea should be used when there are multiple lines of content that needs to
 
 Selects allow you to suggest options with one selection allowed.
 
-![](../../.gitbook/assets/materialized-select-md.jpg)
+![](../../../.gitbook/assets/materialized-select-md.jpg)
 
-```text
+```
 <div class="select">
     <select class="select-text">
         <option value="" disabled selected>Choose your option</option>
@@ -90,11 +90,11 @@ Selects allow you to suggest options with one selection allowed.
 
 ## Select Disabled State
 
-Add `disabled` as an attribute to the &lt;select&gt; element to disable the whole select component.
+Add `disabled` as an attribute to the \<select> element to disable the whole select component.
 
-![](../../.gitbook/assets/disabled-select-md.jpg)
+![](../../../.gitbook/assets/disabled-select-md.jpg)
 
-```text
+```
 <div class="select">
     <select class="select-text" disabled>
         <option value="" disabled selected>Choose your option</option>
@@ -112,9 +112,9 @@ Add `disabled` as an attribute to the &lt;select&gt; element to disable the whol
 
 Radio buttons are used when there is a group of options and only one selection is allowed.
 
-![](../../.gitbook/assets/options-radio.jpg)
+![](../../../.gitbook/assets/options-radio.jpg)
 
-```text
+```
 <p>
 <input name="group1" type="radio" id="option1" />
 <label for="option1">Option 1</label>
@@ -130,9 +130,9 @@ Radio buttons are used when there is a group of options and only one selection i
 
 A switch has two states - on and off.
 
-![](../../.gitbook/assets/switches.jpg)
+![](../../../.gitbook/assets/switches.jpg)
 
-```text
+```
 <div class="switch">
   <label>
     <input type="checkbox">
@@ -145,9 +145,9 @@ A switch has two states - on and off.
 
 Checkboxes are used when there is a true or false option. Checkboxes can also be used to select multiple items in a group.
 
-![](../../.gitbook/assets/checbox-options.jpg)
+![](../../../.gitbook/assets/checbox-options.jpg)
 
-```text
+```
 <p>
   <input type="checkbox" id="test1" />
   <label for="test1">Phantom 4</label>
@@ -158,4 +158,3 @@ Checkboxes are used when there is a true or false option. Checkboxes can also be
    <label for="test2">Inspire 2</label>
 </p>
 ```
-
