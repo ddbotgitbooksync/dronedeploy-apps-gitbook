@@ -6,7 +6,7 @@ At DroneDeploy we use GraphQL for our main API technology, you can get started w
 
 GraphQL Is a query language for clients to fetch the data they need from the API. Fundamentally it is:
 
-* A [**specification**](http://facebook.github.io/graphql/); the specification defines what data can be fetched or updated and defines the format of the response
+* A [**specification**](https://spec.graphql.org/October2021/); the specification defines what data can be fetched or updated and defines the format of the response
 * Strongly typed; GraphQL has a well defined type system which defines what each field in the API can be and guarantees that it will be that.
 * Well structured; the schema not only defines the types of objects and their fields but also defines the links between complex objects. Queries can fetch single objects or traverse the links in the structure to fetch all of the required information in a single query.
 
@@ -22,10 +22,9 @@ The requests are made making a POST to the \`/graphql\` endpoint, you can make t
 
 One of the top level objects in the query schema is the `viewer` object. This is the User object of the currently logged in user. To query for the currently logged in users username you use the following example:
 
-You can explore this query[ here.](https://www.dronedeploy.com/graphql?query={%20viewer{%20username%20%20
-}%20})
+You can explore this query[ here.](https://www.dronedeploy.com/graphql?query=%7B%20viewer%7B%20username%20%20%0A%7D%20%7D)
 
-```text
+```
 {
   viewer{
     username    
@@ -47,7 +46,7 @@ Returns:
 
 The API Explorer is making this request:
 
-```text
+```
 Content-Type: 
 POST /graphql
 {
@@ -57,7 +56,7 @@ POST /graphql
 
 You could also make the call using `curl`
 
-```text
+```
 curl -H 'Content-Type: application/json' \
      -H 'Authorization: Bearer <api key>' \
      -d '{"query": "{ viewer { username }}"}' \
@@ -66,6 +65,5 @@ curl -H 'Content-Type: application/json' \
 
 ## Useful Links:
 
-* The official query documentation is here: [http://graphql.org/learn/queries/](http://graphql.org/learn/queries/) 
+* The official query documentation is here: [http://graphql.org/learn/queries/](http://graphql.org/learn/queries/)&#x20;
 * The official tutorials for learning the basics of GraphQL is here: [http://graphql.org/learn/](http://graphql.org/learn/)
-

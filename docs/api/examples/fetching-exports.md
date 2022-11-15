@@ -1,36 +1,10 @@
 # Fetching Exports
 
-To fetch the exports you first need to fetch the MapPlan. You can do this by using the `node` query. For details see the [Fetching a Single Object](https://github.com/ddbotgitbooksync/dronedeploy-apps-gitbook/tree/c927048f33aac44c8e61d230dc43194aca71784c/apis/examples/fetching-a-single-object.md) section.
+To fetch the exports you first need to fetch the `MapPlan`. You can do this by using the `node` query. For details see the [Fetching a Single Object](fetching-a-single-object.md) section.
 
-[Click here to view this example in the API explorer, substitute your own plan\_id to execute the query.](https://www.dronedeploy.com/graphql?operationName=null&query=query{
-%20%20node%28id%3A"MapPlan%3A5a0de0835f1e08eaabc732bd"%29{
-%20%20%20%20...%20on%20MapPlan{
-%20%20%20%20%20%20exports%28first%3A5%29{
-%20%20%20%20%20%20%20%20edges%20{
-%20%20%20%20%20%20%20%20%20%20node%20{
-%20%20%20%20%20%20%20%20%20%20%20%20id
-%20%20%20%20%20%20%20%20%20%20%20%20user{
-%20%20%20%20%20%20%20%20%20%20%20%20%20%20username
-%20%20%20%20%20%20%20%20%20%20%20%20}
-%20%20%20%20%20%20%20%20%20%20%20%20parameters%20{
-%20%20%20%20%20%20%20%20%20%20%20%20%20%20projection
-%20%20%20%20%20%20%20%20%20%20%20%20%20%20merge
-%20%20%20%20%20%20%20%20%20%20%20%20%20%20contourInterval
-%20%20%20%20%20%20%20%20%20%20%20%20%20%20fileFormat
-%20%20%20%20%20%20%20%20%20%20%20%20%20%20resolution
-%20%20%20%20%20%20%20%20%20%20%20%20}
-%20%20%20%20%20%20%20%20%20%20%20%20status
-%20%20%20%20%20%20%20%20%20%20%20%20dateCreation
-%20%20%20%20%20%20%20%20%20%20%20%20downloadPath
-%20%20%20%20%20%20%20%20%20%20}
-%20%20%20%20%20%20%20%20}
-%20%20%20%20%20%20}
-%20%20%20%20}
-%20%20}
-}
-)
+[Click here to view this example in the API explorer, substitute your own plan\_id to execute the query.](https://www.dronedeploy.com/graphql?operationName=null\&query=query%7B%0A%20%20node\(id%3A%22MapPlan%3A5a0de0835f1e08eaabc732bd%22\)%7B%0A%20%20%20%20...%20on%20MapPlan%7B%0A%20%20%20%20%20%20exports\(first%3A5\)%7B%0A%20%20%20%20%20%20%20%20edges%20%7B%0A%20%20%20%20%20%20%20%20%20%20node%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20id%0A%20%20%20%20%20%20%20%20%20%20%20%20user%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20username%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20parameters%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20projection%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20merge%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20contourInterval%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20fileFormat%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20resolution%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20status%0A%20%20%20%20%20%20%20%20%20%20%20%20dateCreation%0A%20%20%20%20%20%20%20%20%20%20%20%20downloadPath%0A%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D)
 
-```text
+```
 query GetExports{
   node(id:"MapPlan:5a0de0835f1e08eaabc732bd"){
     ... on MapPlan{
@@ -61,7 +35,7 @@ query GetExports{
 
 This returns the data:
 
-```text
+```
 {
   "data": {
     "node": {
@@ -96,7 +70,7 @@ This returns the data:
 
 If you want to keep checking back on the status of a given export you can use the same query shown in Fetching a Single Object to get it.
 
-```text
+```
 query GetExport{
   node(id:"Export:5ab165f348273300019b14a3"){
     ... on Export{
@@ -106,4 +80,3 @@ query GetExport{
   }
 }
 ```
-
