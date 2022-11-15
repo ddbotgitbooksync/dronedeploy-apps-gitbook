@@ -2,7 +2,7 @@
 
 ## Document Setup
 
-DroneDeploy's UI Kit is vastly composed of Material Design components. To start using the UI Kit, please add the MaterializeCSS CDN and DroneDeploy's CSS.
+DroneDeploy's UI Kit is vastly composed of Material Design components. To start using the UI Kit, please add the MaterializeCSS CDN and DroneDeploy's CSS.  The DroneDeploy CSS, `dd-styles.css`, is included with all of our starter [Templates](template.md).
 
 ### CSS
 
@@ -10,7 +10,7 @@ DroneDeploy's UI Kit is vastly composed of Material Design components. To start 
 <!-- Compiled and minified Materialized CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 
-<!-- Compiled and minified DroneDeploy CSS -->
+<!-- DroneDeploy CSS Do Not Modify -->
   <link rel="stylesheet" href="css/dd-styles.css">
 ```
 
