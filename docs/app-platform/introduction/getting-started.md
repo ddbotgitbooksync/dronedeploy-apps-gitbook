@@ -4,7 +4,7 @@
 
 1. [Create an account](https://www.dronedeploy.com/signup.html) on DroneDeploy if you do not have one already.
 2. Become a [DroneDeploy Developer](../readme/developer.md)
-3. Request an API key by contacting support@dronedeploy.com if you do not already have one.
+3. Request an API key by contacting [support@dronedeploy.com](mailto:support@dronedeploy.com) if you do not already have one.
 
 ## Sample App
 
@@ -12,13 +12,18 @@ To get you started, we have created a sample app. By deploying this sample app, 
 
 ### Overview
 
-The app you will be deploying will enable the following flow: 1. A user creates an export 1. When the export completes, an export complete Trigger will go off 1. The Trigger will call out to your DroneDeploy Function 1. The DroneDeploy Function will call to your IFTTT webhook endpoint
+The app you will be deploying will enable the following flow:&#x20;
+
+1. A user creates an export
+2. When the export completes, an export complete Trigger will go off
+3. The Trigger will call out to your DroneDeploy Function
+4. The DroneDeploy Function will call to your IFTTT webhook endpoint
 
 ![](<../../../.gitbook/assets/ifttt-flow (2).png>)
 
 ### Installation
 
-1. You will need to have [npm](https://www.npmjs.com/) and [node.js](https://nodejs.org/en/) installed. Note that we currently support node.js 6 runtime `6.14.0`
+1. You will need to have [npm](https://www.npmjs.com/) and [node.js](https://nodejs.org/en/) installed. Note that we currently support node.js 16 runtime.
 2.  First clone the open-sourced [app-examples](https://github.com/dronedeploy/app-examples) repository
 
     ```
@@ -42,7 +47,7 @@ The app you will be deploying will enable the following flow: 1. A user creates 
 6.  Add your API key to [dronedeploy-cli](dronedeploy-cli.md)
 
     ```
-     $  serverless config credentials --provider=dronedeploy --key=<YOUR API KEY>
+     $  serverless config dronedeploy-credentials --provider=dronedeploy --key=<YOUR API KEY>
     ```
 
 ### App Deployment
@@ -63,11 +68,15 @@ The app you will be deploying will enable the following flow: 1. A user creates 
      $ serverless deploy
     ```
 
-    Note that this will do the following: 1. Deploy the defined `ifttt-webhook` Function 1. Deploy the Export Complete Function Trigger 1. Deploy the `webhook-table` Datastore table
+    Note that this will do the following:
 
-    The deployment should look something like this:
+    1. Deploy the defined `ifttt-webhook` Function
+    2. Deploy the Export Complete Function Trigger
+    3.  Deploy the `webhook-table` Datastore table
 
-    ![](<../../../.gitbook/assets/ifttt-sample-deploy (2).gif>)
+        The deployment should look something like this:
+
+        ![](<../../../.gitbook/assets/ifttt-sample-deploy (2).gif>)
 6. If everything went according to plan, you should now have a Datastore table, a DroneDeploy Function, and a Trigger definition!
 
 ### IFTTT Setup
@@ -84,7 +93,7 @@ The app you will be deploying will enable the following flow: 1. A user creates 
 4.  Copy and paste your URL into your App UI and press save. This will save this URL by passing the URL string to the `ifttt-webhook` function, which will then save the URL to the defined `webhook-table` Datastore table. Try refreshing the page and opening the app - you will notice that your URL is still there and now persisted in your Datastore!
 
     ![](<../../../.gitbook/assets/ifttt-sample-save (2).gif>)
-5.  [Create an Applet](https://ifttt.com/create) on IFTTT using your new IFTTT webhook service as the trigger. Don't forget to select the Webhook at the service and set the event to **dronedeploy**. In this GIF, we are showing an Applet that emails you when a trigger fires. You can find more documentation about how to build an IFTTT Applet [here](https://ifttt.com/blog/2017/05/how-to-build-an-applet).
+5.  [Create an Applet](https://ifttt.com/create) on IFTTT using your new IFTTT webhook service as the trigger. Don't forget to select the Webhook at the service and set the event to **dronedeploy**. In this GIF, we are showing an Applet that emails you when a trigger fires. You can find more documentation about how to build an IFTTT Applet [here](https://ifttt.com/).
 
     ![](<../../../.gitbook/assets/ifttt-applet (2).gif>)
 6. Now if you perform a DroneDeploy map export, you should get an event in IFTTT! When an event triggers, you will see that your IFTTT Applet ran under the [activity](https://ifttt.com/activity) tab.
