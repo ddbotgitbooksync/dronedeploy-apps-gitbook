@@ -1,9 +1,5 @@
 # FAQs
 
-## How can I become a partner?
-
-Fill out this [form](https://airtable.com/shr7Uk76GPThLlp7E) and we will get back to you right away!
-
 ## How can I get app ideas?
 
 {% embed url="https://www.youtube.com/watch?v=ilrWHM95DY0&index=3&list=PLqOge_z8yN2EJ4ftDaY1XdbaneCRQTnvq" %}
@@ -38,7 +34,7 @@ DroneDeploy strongly encourages developers to provide users a free trial, where 
 
 ## How big is DroneDeploy's distribution?
 
-DroneDeploy's distribution network is global. Your app is available to tens of thousands of active drone users across 135 countries. From the single, small business, all the way up to large enterprise companies with many users. There is a large appetite for drone data apps.
+DroneDeploy's distribution network is global. Your app is available to tens of thousands of active drone users across 180+ countries. From the single, small business, all the way up to large enterprise companies with many users. There is a large appetite for drone data apps.
 
 ## How much can I charge for my app?
 
@@ -50,7 +46,7 @@ That's entirely up to you. Pricing methods vary for different types of data prod
 
 ## How do refunds work?
 
-We expect your app to perform as advertised. DroneDeploy subjects all published apps to a rigorous, internal Q.A. assessment that verifies quality, functionality, and performance. More information can be [found in the Platform Policy section](https://dronedeploy.gitbooks.io/dronedeploy-apps/content/guidelines.html) of these docs.
+We expect your app to perform as advertised. DroneDeploy subjects all published apps to a rigorous, internal Q.A. assessment that verifies quality, functionality, and performance. More information can be [found in the section on submitting an app for review](publishing\_app/publishing.md).
 
 ## When and how do I get paid?
 
@@ -60,7 +56,7 @@ Developer revenue share payments are aggregated and sent at the end of the month
 2. International Developers (entities)
 3. International Developers (individuals)
 
-Developers are paid via bank transfer. Please contact the DroneDeploy Developer Team at support@dronedeploy.com to request the proper form and get set up for monetization.
+Developers are paid via bank transfer. Please contact the DroneDeploy Developer Team at [support@dronedeploy.com](mailto:support@dronedeploy.com) to request the proper form and get set up for monetization.
 
 ## How much is the revenue share?
 
