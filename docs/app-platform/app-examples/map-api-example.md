@@ -1,6 +1,6 @@
 # Map API Example
 
-![](../../.gitbook/assets/mapapi.jpg)
+![](../../../.gitbook/assets/mapapi.jpg)
 
 ```markup
 <!DOCTYPE html>
@@ -60,4 +60,3 @@ new DroneDeploy({ version: 1 }).then(function(dronedeploy){
 </body>
 </html>
 ```
-

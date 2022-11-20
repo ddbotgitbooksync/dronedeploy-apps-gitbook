@@ -4,7 +4,7 @@
 
 **Overview**
 
-![](../../.gitbook/assets/example_toast%20%281%29.png)
+![](<../../../.gitbook/assets/example\_toast (1).png>)
 
 ```javascript
 const message = String;
@@ -43,4 +43,3 @@ dronedeployApi.Messaging.showToast('Example Toast', {timeout: neverTimeout})
 ```
 
 [**Full Example**](https://github.com/ddbotgitbooksync/dronedeploy-apps-gitbook/tree/c927048f33aac44c8e61d230dc43194aca71784c/messaging/example-messaging.showtoast.md)
-

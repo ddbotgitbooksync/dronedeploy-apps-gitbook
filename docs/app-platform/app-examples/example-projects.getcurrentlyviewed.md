@@ -1,6 +1,6 @@
 # Projects.getCurrentlyViewed
 
-![](../../.gitbook/assets/projects-getCurrentlyViewed.png)
+![](../../../.gitbook/assets/projects-getCurrentlyViewed.png)
 
 ```markup
 <!DOCTYPE html>
@@ -66,4 +66,3 @@
 
 </html>
 ```
-

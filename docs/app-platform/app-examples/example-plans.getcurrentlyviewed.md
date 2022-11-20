@@ -1,6 +1,6 @@
 # Plans.getCurrentlyViewed
 
-![](../../.gitbook/assets/Screenshot%202017-03-08%2013.37.23.png)
+![](<../../../.gitbook/assets/Screenshot 2017-03-08 13.37.23.png>)
 
 ```markup
 <!DOCTYPE html>
@@ -67,4 +67,3 @@
 
 </html>
 ```
-

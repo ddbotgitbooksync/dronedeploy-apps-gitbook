@@ -6,7 +6,7 @@ Some elements when positioned absolute or fixed will not overflow the page. Ther
 
 See below for an example of how to fix this problem.
 
-![](../../.gitbook/assets/Screen%20Shot%202017-06-19%20at%209.44.31%20AM.png)
+![](<../../../.gitbook/assets/Screen Shot 2017-06-19 at 9.44.31 AM.png>)
 
 ```markup
 <!DOCTYPE html>
@@ -53,4 +53,3 @@ toggleButton.addEventListener('click', function(){
 </body>
 </html>
 ```
-

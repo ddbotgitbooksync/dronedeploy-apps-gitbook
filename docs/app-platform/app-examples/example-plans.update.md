@@ -1,6 +1,6 @@
 # Plans.update
 
-![](../../.gitbook/assets/Screenshot%202017-03-08%2013.03.28.png)
+![](<../../../.gitbook/assets/Screenshot 2017-03-08 13.03.28.png>)
 
 ```markup
 <!DOCTYPE html>
@@ -119,4 +119,3 @@
 
 </html>
 ```
-

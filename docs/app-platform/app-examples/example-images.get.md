@@ -1,6 +1,6 @@
 # Images.get
 
-![](../../.gitbook/assets/Screenshot%202017-03-07%2010.39.48.png)
+![](<../../../.gitbook/assets/Screenshot 2017-03-07 10.39.48.png>)
 
 **note:** You must upload your own project in order to use this API. Please refer to the article on uploading an example project.
 
@@ -75,4 +75,3 @@
 
 </html>
 ```
-

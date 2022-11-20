@@ -1,6 +1,6 @@
 # Exporter.send
 
-![](../../.gitbook/assets/Screenshot%202017-03-03%2015.21.21.png)
+![](<../../../.gitbook/assets/Screenshot 2017-03-03 15.21.21.png>)
 
 ```markup
 <!DOCTYPE html>
@@ -208,4 +208,3 @@
 
 </html>
 ```
-

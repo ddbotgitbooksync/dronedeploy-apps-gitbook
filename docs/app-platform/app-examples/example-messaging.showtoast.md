@@ -1,6 +1,6 @@
 # Messaging.showToast
 
-![](../../.gitbook/assets/Screenshot%202017-03-08%2014.19.42.png)
+![](<../../../.gitbook/assets/Screenshot 2017-03-08 14.19.42.png>)
 
 ```markup
 <!DOCTYPE html>
@@ -97,4 +97,3 @@
 
 </html>
 ```
-

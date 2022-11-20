@@ -2,7 +2,7 @@
 
 **Overview**
 
-![](../../.gitbook/assets/annotations%20%282%29.png)
+![](<../../../.gitbook/assets/annotations (2).png>)
 
 * [Annotations.createMarker](annotations.md#annotationscreatemarker)
 * [Annotations.createLine](annotations.md#annotationscreateline)
@@ -220,7 +220,7 @@ dronedeployApi.Annotations.get('5730dc11929d2465038183ab', {comments: true})
 ]
 ```
 
-[**Full Example**]()
+[**Full Example**](broken-reference)
 
 ## Annotations.getVolume
 
@@ -228,7 +228,7 @@ dronedeployApi.Annotations.get('5730dc11929d2465038183ab', {comments: true})
 
 This function returns the volume information for a volume annotation. DroneDeploy uses this data in the volume annotation detail.
 
-![](../../.gitbook/assets/volume_annotation_detail%20%282%29.png)
+![](<../../../.gitbook/assets/volume\_annotation\_detail (2).png>)
 
 ```javascript
 const annotationId = String;
@@ -295,7 +295,7 @@ dronedeployApi.Annotations.getVolume('581286dccb5fda14db8d2971')
 
 [**Full Example**](https://github.com/ddbotgitbooksync/dronedeploy-apps-gitbook/tree/286bd8e057eb8363e72df2e89cc1af1a00261330/annotations/example-annotations.getvolume.md)
 
- **Errors** 
+&#x20;**Errors**&#x20;
 
 If the map is a legacy map and does not support volume annotations the following error will be returned.
 
@@ -308,7 +308,7 @@ dronedeployApi.Annotations.getVolume('581286dccb5fda14db8d2971')
 // Map does not support volume annotations.
 ```
 
-[**Full Example**]()
+[**Full Example**](broken-reference)
 
 ## Annotations.update
 
@@ -341,4 +341,3 @@ dronedeployApi.Annotations.update(existingAnnotationId, propertiesToUpdate)
     console.log(err);
   });
 ```
-

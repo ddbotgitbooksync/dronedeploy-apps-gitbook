@@ -1,6 +1,6 @@
 # Plans - Get Area of Plan
 
-![](../../.gitbook/assets/area-example.png)
+![](../../../.gitbook/assets/area-example.png)
 
 ```markup
 <!DOCTYPE html>
@@ -50,4 +50,3 @@ new DroneDeploy({version: 1}).then(function(dronedeploy){
 </body>
 </html>
 ```
-

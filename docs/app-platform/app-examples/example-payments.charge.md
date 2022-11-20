@@ -1,6 +1,6 @@
 # Payments.charge
 
-![](../../.gitbook/assets/Screenshot%202017-03-07%2011.09.26.png)
+![](<../../../.gitbook/assets/Screenshot 2017-03-07 11.09.26.png>)
 
 ```markup
 <!DOCTYPE html>
@@ -109,4 +109,3 @@
 
 </html>
 ```
-

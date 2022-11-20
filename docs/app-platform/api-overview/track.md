@@ -38,7 +38,7 @@ DroneDeploy will use this call to make your app more successful by....
 
 * Marketing your app towards user types that score high in this success condition.
 * Identifying inconsistencies in success conditions from different browsers or operating systems can reveal bugs.
-* A / B testing of different versions of your app \(future feature\)
+* A / B testing of different versions of your app (future feature)
 
 **Example Call**
 
@@ -58,5 +58,4 @@ You will be able to access the information DroneDeploy tracks about your app, in
 
 To opt into the recieving tracking information please create a free [segment](https://segment.com/) account and add [your write\_key](https://segment.com/docs/faqs/getting-started/how-to-find-writekey/) to your apps information.
 
-![](../../.gitbook/assets/segment_key.png)
-
+![](../../../.gitbook/assets/segment\_key.png)

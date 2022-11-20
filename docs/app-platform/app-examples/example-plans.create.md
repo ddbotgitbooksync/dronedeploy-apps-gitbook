@@ -1,6 +1,6 @@
 # Plans.create
 
-![](../../.gitbook/assets/plans-create.png)
+![](../../../.gitbook/assets/plans-create.png)
 
 ```markup
 <!DOCTYPE html>
@@ -64,4 +64,3 @@
 
 </html>
 ```
-

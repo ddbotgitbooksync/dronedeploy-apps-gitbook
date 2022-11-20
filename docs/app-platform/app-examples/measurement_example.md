@@ -1,6 +1,6 @@
 # Measurement API Example
 
-![](../../.gitbook/assets/measurement_api.png)
+![](../../../.gitbook/assets/measurement\_api.png)
 
 ```markup
 <!DOCTYPE html>
@@ -75,4 +75,3 @@ function scaleBounds(geometry, factor){
 </body>
 </html>
 ```
-

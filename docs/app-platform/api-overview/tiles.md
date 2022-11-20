@@ -6,9 +6,9 @@
 
 Tiles are the images that the user sees that comprise the map. As the user zooms it loads a new tile layer of the tile pyramid.
 
-![](../../.gitbook/assets/TilePyramidSmall.jpg)
+![](../../../.gitbook/assets/TilePyramidSmall.jpg)
 
-Most maps start zoom level 16 \(Z\) and get more detailed as the the zoom gets higher. Many maps only have tiles upto zoom level 20 or 21 a few very detailed maps may have zoom level 25.
+Most maps start zoom level 16 (Z) and get more detailed as the the zoom gets higher. Many maps only have tiles upto zoom level 20 or 21 a few very detailed maps may have zoom level 25.
 
 Many mapping libraries support tile pyramids, I.E. filling in these values `/{z}/{x}/{y}`as the user pans and scrolls. Included libraries are [leaflet, ](http://leafletjs.com/)[mapbox gl](https://github.com/mapbox/mapbox-gl-js), [google maps](https://developers.google.com/maps/), and many more.
 
@@ -45,4 +45,3 @@ dronedeployApi.Tiles.get({planId: '5605c0e5752afc005a000004', layerName: 'ortho'
 ```
 
 [**Full Example - Get Tiles As Array**](https://github.com/ddbotgitbooksync/dronedeploy-apps-gitbook/tree/7b3d1839636b8b7cb50f53f65f41fff7819beb47/tiles/example-tiles-as-array.md) [**Full Example - Render Tiles in Map**](https://github.com/ddbotgitbooksync/dronedeploy-apps-gitbook/tree/7b3d1839636b8b7cb50f53f65f41fff7819beb47/tiles/render-tiles-example.md)
-

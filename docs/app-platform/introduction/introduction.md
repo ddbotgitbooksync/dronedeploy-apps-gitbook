@@ -6,7 +6,7 @@ Welcome to the DroneDeploy App SDK. We are very excited to share with you what w
 
 The new App SDK introduces three main features in addition to the existing UI platform:
 
-![](../../.gitbook/assets/overview%20%282%29.png)
+![](<../../../.gitbook/assets/overview (2).png>)
 
 * [**UI**](ui-kit.md): Build a custom user interface
 * [**Functions**](functions.md): Serverless architecture running on the DroneDeploy Platform. Write Node.js code to enable backend functionality.
@@ -17,9 +17,8 @@ The new App SDK introduces three main features in addition to the existing UI pl
 
 With these new features, we are unlocking new use cases that were not possible before. We list some ideas below, but we cannot wait to see what amazing new ideas you come up with.
 
-![](../../.gitbook/assets/usecases%20%282%29.png)
+![](<../../../.gitbook/assets/usecases (2).png>)
 
 ## Getting Started
 
 [Get started](getting-started.md) with our sample app and deploy your first DroneDeploy app!
-

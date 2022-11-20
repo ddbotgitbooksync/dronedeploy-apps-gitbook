@@ -1,6 +1,6 @@
 # Annotation create and delete
 
-![](../../.gitbook/assets/Screen%20Shot%202017-02-19%20at%205.01.28%20PM.jpg)
+![](<../../../.gitbook/assets/Screen Shot 2017-02-19 at 5.01.28 PM.jpg>)
 
 ```markup
 <html>
@@ -81,4 +81,3 @@
   </body>
 </html>
 ```
-

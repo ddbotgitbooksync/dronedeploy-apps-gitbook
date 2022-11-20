@@ -1,6 +1,6 @@
 # Annotations.getVolume
 
-![](../../.gitbook/assets/Screenshot%202017-03-03%2012.30.20.png)
+![](<../../../.gitbook/assets/Screenshot 2017-03-03 12.30.20.png>)
 
 ```markup
 <!DOCTYPE html>
@@ -97,4 +97,3 @@
 
 </html>
 ```
-

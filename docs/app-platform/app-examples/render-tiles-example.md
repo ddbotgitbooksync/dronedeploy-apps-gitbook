@@ -1,6 +1,6 @@
 # Tiles.get - Render tiles in map
 
-![](../../.gitbook/assets/rendertiles.png)
+![](../../../.gitbook/assets/rendertiles.png)
 
 ```markup
 <!DOCTYPE html>
@@ -53,4 +53,3 @@ new DroneDeploy({version: 1}).then(function(dronedeploy){
 </body>
 </html>
 ```
-

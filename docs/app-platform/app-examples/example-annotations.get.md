@@ -1,6 +1,6 @@
 # Annotations.get
 
-![](../../.gitbook/assets/Screenshot%202017-03-03%2012.13.23.png)
+![](<../../../.gitbook/assets/Screenshot 2017-03-03 12.13.23.png>)
 
 ```markup
 <!DOCTYPE html>
@@ -77,4 +77,3 @@
 
 </html>
 ```
-
