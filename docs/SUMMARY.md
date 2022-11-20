@@ -48,7 +48,6 @@
   * [Images](app-platform/api-overview/images.md)
   * [Link](app-platform/api-overview/link.md)
   * [Messaging](app-platform/api-overview/messaging.md)
-  * [Overlay](app-platform/api-overview/overlay.md)
   * [Payments](app-platform/api-overview/payments.md)
   * [Plans](app-platform/api-overview/plans.md)
   * [Popup](app-platform/api-overview/popup.md)
