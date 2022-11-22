@@ -4,7 +4,7 @@
 
 Once you have a [DroneDeploy Function](functions.md) defined and deployed, you might want to call the Function from your App's UI. We have built App APIs to make this very easy.
 
-First, you want to get the Url of the Function. You can do this by passing in the Function's name into the following API.
+First, you want to get the URL of the Function. You can do this by passing in the Function's name into the following API.
 
 ```javascript
 api.Functions.getUrl(FUNCTION_NAME);
@@ -16,12 +16,12 @@ Second, you will want to get a scoped JWT token. This provides authentication an
 api.Authorization.getScopedToken();
 ```
 
-Finally, your code might look something like this:
+Finally, here's an example of what your UI app code might look like when calling a function:
 
+{% code lineNumbers="true" %}
 ```javascript
 const dronedeploy = new DroneDeploy({version: 1});
 const FUNCTION_NAME = "ifttt-webhook";
-const api = await dronedeploy;
 
 /**
  * Generic function for calling out to Function
@@ -34,16 +34,18 @@ async function callFunction() {
 
   // Get a token to ensure auth when calling your function
   const token = await api.Authorization.getScopedToken();
-  options = {
+  
+  // Additional headers, such as "Content-Type", may be necessary
+  const options = {
     method: "POST",
     body: JSON.stringify({data: "hello world"}),
     headers: {
         Authorization: `Bearer ${token}`
     }
   }
-  return fetch(`${functionUrl}`, options);
+  return fetch(functionUrl, options);
 }
 ```
+{% endcode %}
 
 You can see how this all works in our [sample app](https://github.com/dronedeploy/app-examples/blob/master/IFTTT/app/js/script.js).
-
