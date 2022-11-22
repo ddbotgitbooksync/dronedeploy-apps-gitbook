@@ -41,6 +41,7 @@
   * [Helpers](app-platform/getting\_started/hellpers.md)
   * [Templates](app-platform/getting\_started/template.md)
 * [Javascript API](app-platform/api-overview/README.md)
+  * [Authorization](app-platform/api-overview/authorization.md)
   * [Annotations](app-platform/api-overview/annotations.md)
   * [CadOverlay](app-platform/api-overview/cad-overlay.md)
   * [Exporter](app-platform/api-overview/exporter.md)
