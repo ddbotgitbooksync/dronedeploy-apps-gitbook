@@ -94,8 +94,5 @@
   * [Sample Flight Log](app-platform/app-examples/sample-flight-log.md)
   * [Tiles.get - Get Tiles As Array](app-platform/app-examples/example-tiles-as-array.md)
   * [Tiles.get - Render tiles in map](app-platform/app-examples/render-tiles-example.md)
-* [Platform Policy](app-platform/platform-policy/README.md)
-  * [Success Condition](app-platform/platform-policy/success-condition.md)
-  * [Publishing](app-platform/platform-policy/publishing.md)
 * [Authentication](app-platform/authentication.md)
 * [FAQs](app-platform/faqs.md)
