@@ -6,7 +6,7 @@ DroneDeploy Functions uses serverless architecture running on the DroneDeploy Pl
 
 ## Runtime
 
-DroneDeploy Functions currently run on the Node.js 10 runtime.
+DroneDeploy Functions currently run on the Node.js 16 runtime.
 
 ## Writing a Function
 
@@ -16,7 +16,7 @@ You can see an example function in our [**IFTTT sample app**](https://github.com
 
 A DroneDeploy Function has the following files:
 
-```text
+```
 ├── functions
 │   └── webhook
 │       ├── config.json
@@ -69,9 +69,9 @@ You can learn more about the `ctx` object from the @dronedeploy/function-wrapper
 
 ### config.json
 
-The `.env` file allows you to determine whether or not this function should be protected behind DroneDeploy JWTs. The file is not mandatory. Typically when used your file should look like this \(presented with default values\):
+The `.env` file allows you to determine whether or not this function should be protected behind DroneDeploy JWTs. The file is not mandatory. Typically when used your file should look like this (presented with default values):
 
-```text
+```
 AUTH_REQUIRED=true
 MOCK_TOKEN=false
 CORS_HEADERS=some-cors-header,some-other-allowed-header
@@ -106,7 +106,7 @@ It is important to have the `"main"` field be `dronedeploy.js` as that is how th
   "author": "dronedeploy",
   "license": "MIT",
   "dependencies": {
-    "@dronedeploy/function-wrapper": "1.1.7",
+    "@dronedeploy/function-wrapper": "1.3.2",
     "dotenv": "5.0.1",
     "md5": "^2.2.1",
     "request": "2.87.0"
@@ -122,13 +122,13 @@ In order to secure your DroneDeploy Function, you will need to use the DroneDepl
 
 You can install the wrapper with the following command:
 
-```text
+```
     $ npm i --save @dronedeploy/function-wrapper
 ```
 
 You will also need to make sure that your have the [dronedeploy-cli](https://www.npmjs.com/package/@dronedeploy/dronedeploy-cli) installed as a development dependency to be able to deploy correctly using the CLI. If you do not already have the CLI defined as a dependency in `package.json`, you can install it by running the following command.
 
-```text
+```
     $ npm install --save-dev @dronedeploy/dronedeploy-cli
 ```
 
@@ -141,4 +141,3 @@ The easiest way to deploy a DroneDeploy Function is by using the [DroneDeploy CL
 * Functions are stateless
 * Maximum function timeout is 540 seconds
 * Maximum memory allocation is 2048 mb
-

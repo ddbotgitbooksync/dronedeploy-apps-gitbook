@@ -4,7 +4,7 @@ Triggers allow your DroneDeploy App to respond to events happening on the DroneD
 
 Triggers are associated with an App's Function. In order for a Trigger event to fire, the user who triggered the event needs to have the App installed, and the Function should have a Trigger defined. You can define Triggers using the `DroneDeploy CLI` and the `serverless.yml` file. For example:
 
-```text
+```
 service: IFTTT
 
 provider:
@@ -60,5 +60,47 @@ You can check out our [sample app](https://github.com/dronedeploy/app-examples/b
 We currently support the following Triggers:
 
 * Export:complete
+* Folder:created
 * MapPlan:complete
+* MapPlan:workflow\_job\_complete
+* ProgressPhotos:complete
+* ProgressPhotosPlan:complete
+* Project:created
+* Plan:deleted
+* StandAssessmentPlan:json\_uploaded
+
+## Manually Executing Trigger Handler
+
+**Note: These instructions are specific to a user with admin privileges**
+
+1. Log into DroneDeploy and retrieve your scoped JWT token. See [here](ui-kit.md) for more info on retrieving a token.
+2. In Postman (or other REST client) use this token to set the `Authorization` header for the API request
+3. Using Postman, build a `POST` request to [https://www.dronedeploy.com/api/v2/trigger](https://www.dronedeploy.com/api/v2/trigger) which executes function triggers on-demand.
+4. Executing the `POST` request should result in a 200 OK with `{}` as the response if successful
+5. ```
+   // Example Payload for StandAssessmentPlan:json_uploaded
+
+   {
+       "event_object_type": "StandAssessmentPlan",
+       "event_type": "json_uploaded",
+       "object_id": "<insert one plan_id here>",
+       "user_id": "<org owner id>"
+   }
+   ```
+
+## Troubleshooting
+
+#### Attempting to execute a trigger function and receiving a 403 <a href="#users-attempting-to-execute-a-trigger-function-and-receiving-a-403" id="users-attempting-to-execute-a-trigger-function-and-receiving-a-403"></a>
+
+If you are attempting to trigger a function and receiving a 403, it’s potentially because the payload is incorrect.
+
+Make sure that:
+
+1. Your user is an organization admin
+2. You use your user's bearer token and your user’s ID in the request
+3. "object\_id" will need to be included in the “trigger” API payload and be an ID of the type of object for the trigger (i.e. Map Plan or Export ID)
+
+Non-admin users must authenticate with their API key as a query param. The "user\_id" is not necessary in the data object as it will be derived from the API key.
+
+Example public request url: [https://public-api.dronedeploy.com/v2/trigger?api\_key=\<api\_key>](https://dronedeploy.atlassian.net/wiki/spaces/ED/pages/2007957505/Runbook+-+EE+-+Triggers+Corteva+and+otherwise)
 
