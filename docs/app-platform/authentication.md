@@ -4,9 +4,10 @@ When your app loads the user will already be authenticated with DroneDeploy. The
 
 Below are some common examples...
 
-* [Username / Password](authentication.md#username--password)
-* [OAuth 2.0](authentication.md#oauth-20)
+* [Username / Password](authentication.md#username-password)
+* [OAuth 2.0](authentication.md#oauth-2.0)
 * [API Key](authentication.md#api-key)
+* [Common Pitfalls](authentication.md#common-pitfalls)
 
 ## Username / Password
 
@@ -17,15 +18,15 @@ Below are some common examples...
 
 ## OAuth 2.0
 
-You'll need a server to handle the OAuth secret, store the OAuth token, and handle OAuth callbacks. In the below example we are assuming "your-oauth-server.com" is your authentication server and "your-dronedeploy-app-server.com" is a proxy server in charge of your DroneDeploy app. However, if you prefer you can instead put this dronedeploy functionality as a subroute on your main server, "your-oauth-server.com/dronedeploy-app".
+You'll need a server to handle the OAuth secret, store the OAuth token, and handle OAuth callbacks. In the below example we are assuming "your-oauth-server.com" is your authentication server and "your-dronedeploy-app-server.com" is a proxy server in charge of your DroneDeploy app. However, if you prefer, you can instead put this dronedeploy functionality as a subroute on your main server, "your-oauth-server.com/dronedeploy-app".
 
-1. Use the [Link.open](https://github.com/ddbotgitbooksync/dronedeploy-apps-gitbook/tree/c927048f33aac44c8e61d230dc43194aca71784c/link/example-link.open.md) API to open your authentication request in a new window
-   1. E.X: [https://www.your-oauth-server.com/authenticate?service=dronedeployapp&callback=https://your-dronedeploy-app-server.com/callback](https://www.your-oauth-server.com/authenticate?service=dronedeployapp&callback=https://your-dronedeploy-app-server.com/callback?identifier=WEB_SOCKET_CLIENT_ID)
-2. When the authentication flow completes on the server for "[https://your-dronedeploy-app-server.com/callback?token=SERVICE\_TOKEN](https://your-dronedeploy-app-server.com/callback?identifier=WEB_SOCKET_CLIENT_ID&token=SERVICE_TOKEN)"  the token should be saved in the database and corresponding JWT token should be sent back to the client via postMessage
-   1. window.opener.postMessage\('MY\_Service\_Authentication Successful', '\*'\) [Full Example](https://github.com/dronedeploy/post-message-opener-window-example)
-   2. NOTE: On the DroneDeploy native apps \(iOS and Android\) post messaging back the token won't be possible. Since window.open won't work on Cordova. In this scenario you should instead start the OAuth flow with a random uuid and poll the server until the authentication flow is successful.
+1. Use the [Link.open](app-examples/example-link.open.md) API to open your authentication request in a new window
+   1. EX. "https://www.your-oauth-server.com/authenticate?service=dronedeployapp\&callback=https://your-dronedeploy-app-server.com/callback"
+2. When the authentication flow completes on the server for "https://your-dronedeploy-app-server.com/callback?token=SERVICE\_TOKEN"  the token should be saved in the database and corresponding JWT token should be sent back to the client via postMessage
+   1. window.opener.postMessage('MY\_Service\_Authentication Successful', '\*') [Full Example](https://github.com/dronedeploy/post-message-opener-window-example)
+   2. NOTE: On the DroneDeploy native apps (iOS and Android) post messaging back the token won't be possible. Since window.open won't work on Cordova. In this scenario you should instead start the OAuth flow with a random uuid and poll the server until the authentication flow is successful.
 3. Once the frontend has the JWT token it should store it in localstorage and proxy all of its network requests through "your-dronedeploy-app-server.com".
-   1. E.X. frontend /get-user --&gt; your-dronedeploy-app-server.com/get-user --&gt; [https://www.your-api.com/get-user](https://www.your-api.com/get-user)
+   1. EX. frontend /get-user --> your-dronedeploy-app-server.com/get-user --> https://www.your-api.com/get-user
 
 ## API Key
 
@@ -35,4 +36,3 @@ Have the user provide a client-side API key and store it in localstorage
 
 * Don't trust the "user.email" field for authentication. Since the whole API lives on the frontend anyone could pass false emails to your application.
 * Don't navigate or reload your dronedeploy iframe. If you do you won't be able to use the DroneDeploy embedded api.
-
