@@ -1,7 +1,5 @@
 # Tiles.get - Get Tiles As Array
 
-![](https://github.com/ddbotgitbooksync/dronedeploy-apps-gitbook/tree/c927048f33aac44c8e61d230dc43194aca71784c/tile-array-example.png)
-
 **NOTE:** You must upload your own project in order to use this API. Please refer to the article on [uploading an example project](how-to-upload-an-example-project.md). Once the project has been uploaded, click on it to reach the export button.
 
 ```markup
