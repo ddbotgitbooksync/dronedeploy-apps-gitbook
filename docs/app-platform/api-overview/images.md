@@ -2,7 +2,7 @@
 
 ## Images.get
 
- **Overview** 
+&#x20;**Overview**&#x20;
 
 ```javascript
 /** 
@@ -110,5 +110,4 @@ Note: Values under `data.exif` are not normalized and vary depending on the came
 }]
 ```
 
-[**Full Example**](https://github.com/ddbotgitbooksync/dronedeploy-apps-gitbook/tree/c927048f33aac44c8e61d230dc43194aca71784c/images/example-images.get.md)
-
+[**Full Example**](../app-examples/example-images.get.md)

@@ -8,4 +8,4 @@ Some methods within in the DroneDeploy API require that the current user is also
    1. ![Create project button on DroneDeploy dashboard](<../../.gitbook/assets/Screen Shot 2022-11-22 at 5.58.09 PM.png>)
 4. On the next screen, click the Upload button
    1. ![DroneDeploy add project view](<../../.gitbook/assets/Screen Shot 2022-11-22 at 5.58.59 PM.png>)
-5. Upload all files from the zip file on the upload page and once uploaded, your dataset will be processed into a map.&#x20;
+5. Upload all files from the zip file on the upload page and, once uploaded, your dataset will be processed into a map.&#x20;

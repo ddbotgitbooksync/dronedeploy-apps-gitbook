@@ -4,7 +4,7 @@
 
 **Overview**
 
-Since apps run on Web, iOS, and Android some things like links can be a little more complicated. In order to abstract this complexity we've added a method \`dronedeployApi.Link.open\` that abstracts Cordova methods that need to be called on native devices.
+Since apps run on Web, iOS, and Android, some things like links can be a little more complicated. In order to abstract this complexity, we've added a method `dronedeployApi.Link.open` to make this easier on native devices.
 
 **Example**
 
@@ -14,4 +14,3 @@ dronedeployApi.Link.open('https://www.google.com/');
 ```
 
 [**Example: Link.open**](../app-examples/example-link.open.md)
-

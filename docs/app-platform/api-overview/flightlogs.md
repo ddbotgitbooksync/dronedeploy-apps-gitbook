@@ -28,5 +28,4 @@ dronedeployApi.FlightLogs.getLogsFromPlan('57eaa66d2a2b43fa1249c76c')
 ]
 ```
 
-[**Full Example**](https://github.com/ddbotgitbooksync/dronedeploy-apps-gitbook/tree/c927048f33aac44c8e61d230dc43194aca71784c/flightlogs/example-flightlog.getlogsfromplan.md)
-
+[**Full Example**](../app-examples/example-flightlog.getlogsfromplan.md)
