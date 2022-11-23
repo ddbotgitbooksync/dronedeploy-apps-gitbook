@@ -4,11 +4,11 @@
 
 ## getScopedToken
 
-`Authorization.getScopedToken` returns an authenticated JWT token to make further calls to the DroneDeploy API. This token will be set as part of the `Authorization` header as a `Bearer` token inside of subsequent requests.
+`Authorization.getScopedToken` returns an authenticated JWT token to make further calls to the DroneDeploy API. This token should be set as part of the `Authorization` header as a `Bearer` token inside of subsequent requests.
 
 ### Example Usage
 
-```
+```javascript
 const dronedeploy = new DroneDeploy({version: 1});
 
 async function callApiUrl(url) {
@@ -26,5 +26,4 @@ async function callApiUrl(url) {
   }
   return fetch(url, options);
 }
-
 ```
