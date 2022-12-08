@@ -2,16 +2,18 @@
 
 **Overview**
 
-![](<../../../.gitbook/assets/annotations (2).png>)
+<figure><img src="../../.gitbook/assets/Screen Shot 2022-12-07 at 2.38.47 PM.png" alt=""><figcaption></figcaption></figure>
 
-* [Annotations.createMarker](annotations.md#annotationscreatemarker)
-* [Annotations.createLine](annotations.md#annotationscreateline)
-* [Annotations.createArea](annotations.md#annotationscreatearea)
-* [Annotations.createVolume](annotations.md#annotationscreatevolume)
-* [Annotations.delete](annotations.md#annotationsdelete)
-* [Annotations.get](annotations.md#annotationsget)
-* [Annotations.getVolume](annotations.md#annotationsgetvolume)
-* [Annotations.update](annotations.md#annotationsupdate)
+* [Annotations.createMarker](annotations.md#annotations.createmarker)
+* [Annotations.createLine](annotations.md#annotations.createline)
+* [Annotations.createArea](annotations.md#annotations.createarea)
+* [Annotations.createVolume](annotations.md#annotations.createvolume)
+* [Annotations.delete](annotations.md#annotations.delete)
+* [Annotations.get](annotations.md#annotations.get)
+* [Annotations.getVolume](annotations.md#annotations.getvolume)
+* [Annotations.update](annotations.md#annotations.update)
+* [Annotations.getCurrentlyViewed](annotations.md#annotations.getcurrentlyviewed)
+* [Annotations.selectAnnotation](annotations.md#annotations.selectannotation)
 
 ## Annotations.createMarker
 
@@ -140,7 +142,7 @@ dronedeployApi.Annotations.get('5730dc11929d2465038183ab', {comments: true})
   .then(function(annotations){ console.log(annotations) })
 ```
 
-[**Full Example**](https://github.com/ddbotgitbooksync/dronedeploy-apps-gitbook/tree/286bd8e057eb8363e72df2e89cc1af1a00261330/annotations/example-annotations.get.md)
+[**Full Example**](../app-examples/example-annotations.get.md)
 
 **Example Response**
 
@@ -220,8 +222,6 @@ dronedeployApi.Annotations.get('5730dc11929d2465038183ab', {comments: true})
 ]
 ```
 
-[**Full Example**](broken-reference)
-
 ## Annotations.getVolume
 
 **Overview**
@@ -293,7 +293,7 @@ dronedeployApi.Annotations.getVolume('581286dccb5fda14db8d2971')
 }
 ```
 
-[**Full Example**](https://github.com/ddbotgitbooksync/dronedeploy-apps-gitbook/tree/286bd8e057eb8363e72df2e89cc1af1a00261330/annotations/example-annotations.getvolume.md)
+[**Full Example**](../app-examples/example-annotations.getvolume.md)
 
 &#x20;**Errors**&#x20;
 
@@ -308,8 +308,6 @@ dronedeployApi.Annotations.getVolume('581286dccb5fda14db8d2971')
 // Map does not support volume annotations.
 ```
 
-[**Full Example**](broken-reference)
-
 ## Annotations.update
 
 **Overview**
@@ -319,6 +317,8 @@ This function enables updates to existing annotation properties. Valid propertie
 * `color`
 * `description`
 * `geometry`
+
+[**Full Example**](../app-examples/annotations.update.md)
 
 ```javascript
 const existingAnnotationId = String;
@@ -340,4 +340,33 @@ dronedeployApi.Annotations.update(existingAnnotationId, propertiesToUpdate)
     // something went wrong with the update
     console.log(err);
   });
+```
+
+## Annotations.getCurrentlyViewed
+
+**Overview**
+
+This function gets the currently viewed annotation.
+
+[**Full Example**](../app-examples/annotations.getcurrentlyviewed.md)
+
+```javascript
+dronedeployApi.Annotations.getCurrentlyViewed().subscribe((annotation) => {
+    console.log(annotation);
+});
+```
+
+## Annotations.selectAnnotation
+
+**Overview**
+
+This function allows you to select an annotation by its id.&#x20;
+
+[**Full Example**](../app-examples/annotations.selectannotation.md)
+
+```javascript
+const annotationId = String;
+dronedeployApi.Annotations.selectAnnotation(annotationId).subscribe((annotation) => {
+    console.log(annotation);
+});
 ```
