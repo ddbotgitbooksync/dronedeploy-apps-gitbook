@@ -1,15 +1,15 @@
 # Measurement
 
-This is a wrapper for our REST measurement API, [https://support.dronedeploy.com/v1.0/docs/measurements-api](https://support.dronedeploy.com/v1.0/docs/measurements-api), allowing you to make these calls inside DroneDeploy apps.
+This is a wrapper for our REST measurement API, [https://help.dronedeploy.com/hc/en-us/articles/1500004860581-Measurements-API](https://help.dronedeploy.com/hc/en-us/articles/1500004860581-Measurements-API), allowing you to make these calls inside DroneDeploy apps.
 
-* [Elevation of Point](measurement.md#elevationofpoint)
-* [Elevation of Points](measurement.md#elevationofpoints)
-* [Elevation of Line](measurement.md#elevationofline)
-* [Volume of Points](measurement.md#elevationofpoints)
+* [Elevation of Point](measurement.md#elevation-of-point)
+* [Elevation of Points](measurement.md#elevation-of-points)
+* [Elevation of Line](measurement.md#elevation-of-line)
+* [Volume of Points](measurement.md#volume-of-points)
 
 ## Elevation of Point
 
- **Example Call**
+&#x20;**Example Call**
 
 ```javascript
 dronedeployApi.Measurement.getElevationOfPoint(plan.id, {lat: 35.9272, lng: -96.7493})
@@ -30,7 +30,7 @@ dronedeployApi.Measurement.getElevationOfPoint(plan.id, {lat: 35.9272, lng: -96.
 }
 ```
 
-[**Full Example**](https://github.com/ddbotgitbooksync/dronedeploy-apps-gitbook/tree/c927048f33aac44c8e61d230dc43194aca71784c/measurement_example.md)
+[**Full Example**](../app-examples/measurement\_example.md)
 
 ## Elevation of Points
 
@@ -64,7 +64,7 @@ dronedeployApi.Measurement.getElevationOfPoints(plan.id, [{lat: 35.9272, lng: -9
 ]
 ```
 
-[**Full Example**](https://github.com/ddbotgitbooksync/dronedeploy-apps-gitbook/tree/c927048f33aac44c8e61d230dc43194aca71784c/measurement_example.md)
+[**Full Example**](../app-examples/measurement\_example.md)
 
 ## Elevation of Line
 
@@ -103,7 +103,7 @@ dronedeployApi.Measurement.getElevationOfLine(plan.id, [{lat: 35.9272, lng: -96.
 }
 ```
 
-[**Full Example**](https://github.com/ddbotgitbooksync/dronedeploy-apps-gitbook/tree/c927048f33aac44c8e61d230dc43194aca71784c/measurement_example.md)
+[**Full Example**](../app-examples/measurement\_example.md)
 
 ## Volume of Points
 
@@ -111,7 +111,7 @@ dronedeployApi.Measurement.getElevationOfLine(plan.id, [{lat: 35.9272, lng: -96.
 
 ```javascript
 var geometry = [{lat: 35.9272, lng: -96.7493}, {lat: 35.9272, lng: -96.7493}, {lat: 35.9272, lng: -96.7493}];
-var optionalVolumeSetting = 'lowest'; // will default to fit -- See https://support.dronedeploy.com/v1.0/docs/volume-measurement#section-selecting-the-right-baseplane
+var optionalVolumeSetting = 'lowest'; // will default to fit -- See https://help.dronedeploy.com/hc/en-us/articles/1500004963922-Volume-Measurement-with-Drones (section: Selecting the Right Base Plane)
 dronedeployApi.Measurement.getVolume(plan.id, geometry, optionalVolumeSetting)
   .then(function(jsonResult){
     console.log(jsonResult);
@@ -132,5 +132,4 @@ dronedeployApi.Measurement.getVolume(plan.id, geometry, optionalVolumeSetting)
 ]
 ```
 
-[**Full Example**](https://github.com/ddbotgitbooksync/dronedeploy-apps-gitbook/tree/c927048f33aac44c8e61d230dc43194aca71784c/measurement_example.md)
-
+[**Full Example**](../app-examples/measurement\_example.md)
