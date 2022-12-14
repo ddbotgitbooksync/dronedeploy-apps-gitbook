@@ -16,6 +16,8 @@ new DroneDeploy({version: 1}).then(function(dronedeployApi){
 })
 ```
 
+_**Note**_: The following code represents example usage. Replace `Class` and `method` with the actual class and method from the API.
+
 You can listen to the result of any `dronedeployApi` call via promises.
 
 ```javascript
