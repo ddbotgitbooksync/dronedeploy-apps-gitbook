@@ -23,7 +23,7 @@ Be sure to have gone through the [**Getting Started**](getting-started.md) prere
 
 This is what the directory structure of your DroneDeploy App might look like. You can see an actual example with our [IFTTT sample app](https://github.com/dronedeploy/app-examples/tree/master/IFTTT).
 
-```text
+```
 ├── app
 │   ├── css
 │   │   └── styles.css
@@ -63,14 +63,14 @@ It is important to have the `"main"` field be `dronedeploy.js` as that is how th
   "main": "dronedeploy.js",
   "author": "dronedeploy",
   "devDependencies": {
-    "@dronedeploy/dronedeploy-cli": "1.1.1"
+    "@dronedeploy/dronedeploy-cli": "2.1.0"
   }
 }
 ```
 
 You will also need to make sure that your have the [dronedeploy-cli](https://www.npmjs.com/package/@dronedeploy/dronedeploy-cli) installed as a development dependency to be able to deploy correctly using the CLI. If you do not already have the CLI defined as a dependency in `package.json`, you can install it by running the following command.
 
-```text
+```
     $ npm install --save-dev @dronedeploy/dronedeploy-cli
 ```
 
@@ -82,7 +82,7 @@ The serverless.yml file is the blueprint to your App. This file is where you wil
 
 The `dronedeploy-cli` is built using the [Serverless framework](https://serverless.com/framework/docs/). The serverless framework uses the `serverless.yml` file for configuration.
 
-```text
+```
 service: IFTTT
 
 provider:
@@ -134,7 +134,7 @@ functions:
 
 With the [DroneDeploy CLI](dronedeploy-cli.md), you can deploy your Functions, Datastore tables, and Triggers with one command:
 
-```text
+```
     $ serverless deploy
 ```
 
@@ -144,7 +144,7 @@ Once you run `serverless deploy`, your app is now ready for use.
 
 Once your Function has been deployed, you can check its status by running:
 
-```text
+```
     $ sls status
 ```
 
@@ -152,16 +152,16 @@ Once your Function has been deployed, you can check its status by running:
 
 Running functions locally is extremely simple using Google's [functions-framework](https://cloud.google.com/functions/docs/functions-framework).
 
-cd into your actual function folder
+`cd` into your actual function folder
 
-```text
+```
     $ npm install @google-cloud/functions-framework
     $ npm install
 ```
 
 Add a start script to `package.json`, with configuration passed via command-line arguments:
 
-```text
+```
     "scripts": {
       "start": "functions-framework --target=dronedeploy"
     }
@@ -169,7 +169,7 @@ Add a start script to `package.json`, with configuration passed via command-line
 
 Note that your `package.json` will look something like below. Note the `main` and `scripts` fields, they indicate the entry file and point for your function.
 
-```text
+```
     {
       "name": "ifttt-webhook",
       "version": "0.1.0",
@@ -178,9 +178,9 @@ Note that your `package.json` will look something like below. Note the `main` an
       "author": "dronedeploy",
       "license": "MIT",
       "dependencies": {
-        "@dronedeploy/function-wrapper": "1.2.3",
-        "@google-cloud/functions-framework": "^1.6.0",
-        "dotenv": "5.0.1"
+        "@dronedeploy/function-wrapper": "1.3.2",
+        "@google-cloud/functions-framework": "^3.1.3",
+        "dotenv": "16.0.3"
       },
       "scripts": {
         "start": "functions-framework --target=dronedeploy"
@@ -190,7 +190,7 @@ Note that your `package.json` will look something like below. Note the `main` an
 
 Next, run the following:
 
-```text
+```
     $ npm start
     ...
     Serving function...
@@ -200,7 +200,7 @@ Next, run the following:
 
 You should be able to send requests to this function using curl from another terminal window. Note that you can generate an authentication token from the CLI which you can pass in as a bearer token to authenticate your function request.
 
-```text
+```
     $ sls getAuth
 ```
 
@@ -208,13 +208,12 @@ You should be able to send requests to this function using curl from another ter
 
 Once your Function is up and running, you can check its logs with the following command:
 
-```text
+```
     $ sls logs --functionName ifttt-webhook --tail
 ```
 
 You can find all CLI commands by running the following:
 
-```text
+```
     $ sls help
 ```
-
