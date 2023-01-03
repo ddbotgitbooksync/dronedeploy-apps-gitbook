@@ -10,19 +10,27 @@
 
 **Exporter.list**
 
-* [Exporter.list](exporter.md#exporterlist)
+* [Exporter.list](exporter.md#exporter.list)
 
 **Exporter.getSelectedAutoExportParams**
 
-* [Exporter.getSelectedAutoExportParams](exporter.md#exportergetselectedautoexportparams)
+* [Exporter.getSelectedAutoExportParams](exporter.md#exporter.getselectedautoexportparams)
 
 **Exporter.createAutoExport**
 
-* [Exporter.createAutoExport](exporter.md#exportercreateautoexport)
+* [Exporter.createAutoExport](exporter.md#exporter.createautoexport)
 
 **Exporter.closePopup**
 
-* [Exporter.closePopup](exporter.md#exporterclosepopup)
+* [Exporter.closePopup](exporter.md#exporter.closepopup)
+
+**Exporter.get3DModelLink**
+
+* [Exporter.get3DModelLink](exporter.md#exporter.get3dmodellink)
+
+**Exporter.getPointCloudLink**
+
+* [Exporter.getPointCloudLink](exporter.md#exporter.getpointcloudlink)
 
 ## Exporter.send
 
@@ -59,7 +67,7 @@ dronedeployApi.Exporter.send(exportOptions)
   .then(function(exportId){ console.log(exportId) });
 ```
 
-[**Full Example**](https://github.com/ddbotgitbooksync/dronedeploy-apps-gitbook/tree/9b02b010aa57a342cc1b45bd18bfa3594dfdd5a8/exporter/example-exporter.send.md)
+****[**Full Example**](https://github.com/ddbotgitbooksync/dronedeploy-apps-gitbook/blob/12543a9abbbd2e7d0c0b7159adbf3a73af279cfe/docs/exporter/example-exporter.send.md)****
 
 ### NDVI Toolbox Export
 
@@ -94,7 +102,7 @@ dronedeployApi.Exporter.send(exportOptions)
   .then(function(exportId){ console.log(exportId) });
 ```
 
-[**Full Example**](https://github.com/ddbotgitbooksync/dronedeploy-apps-gitbook/tree/9b02b010aa57a342cc1b45bd18bfa3594dfdd5a8/exporter/example-exporter.send.md)
+****[**Full Example**](https://github.com/ddbotgitbooksync/dronedeploy-apps-gitbook/blob/12543a9abbbd2e7d0c0b7159adbf3a73af279cfe/docs/exporter/example-exporter.send.md)****
 
 ### Elevation Export
 
@@ -130,7 +138,7 @@ dronedeployApi.Exporter.send(exportOptions)
   .then(function(exportId){ console.log(exportId) });
 ```
 
-[**Full Example**](https://github.com/ddbotgitbooksync/dronedeploy-apps-gitbook/tree/9b02b010aa57a342cc1b45bd18bfa3594dfdd5a8/exporter/example-exporter.send.md)
+****[**Full Example**](https://github.com/ddbotgitbooksync/dronedeploy-apps-gitbook/blob/12543a9abbbd2e7d0c0b7159adbf3a73af279cfe/docs/exporter/example-exporter.send.md)****
 
 ### 3D Export
 
@@ -161,7 +169,7 @@ dronedeployApi.Exporter.send(exportOptions)
   .then(function(exportId){ console.log(exportId) });
 ```
 
-[**Full Example**](https://github.com/ddbotgitbooksync/dronedeploy-apps-gitbook/tree/9b02b010aa57a342cc1b45bd18bfa3594dfdd5a8/exporter/example-exporter.send.md)
+****[**Full Example**](https://github.com/ddbotgitbooksync/dronedeploy-apps-gitbook/blob/12543a9abbbd2e7d0c0b7159adbf3a73af279cfe/docs/exporter/example-exporter.send.md)****
 
 ### Point Cloud Export
 
@@ -194,7 +202,7 @@ dronedeployApi.Exporter.send(exportOptions)
   .then(function(exportId){ console.log(exportId) });
 ```
 
-[**Full Example**](https://github.com/ddbotgitbooksync/dronedeploy-apps-gitbook/tree/9b02b010aa57a342cc1b45bd18bfa3594dfdd5a8/exporter/example-exporter.send.md)
+****[**Full Example**](https://github.com/ddbotgitbooksync/dronedeploy-apps-gitbook/blob/12543a9abbbd2e7d0c0b7159adbf3a73af279cfe/docs/exporter/example-exporter.send.md)****
 
 ## Exporter.list
 
@@ -248,7 +256,7 @@ dronedeployApi.Exporter.list({planId: '5803c075d0ec0a44f0a75a86'})
 ]
 ```
 
-[**Full Example**](https://github.com/ddbotgitbooksync/dronedeploy-apps-gitbook/tree/9b02b010aa57a342cc1b45bd18bfa3594dfdd5a8/exporter/example-exporter.get3dmodellink.md)
+****[**Full Example**](https://github.com/ddbotgitbooksync/dronedeploy-apps-gitbook/blob/12543a9abbbd2e7d0c0b7159adbf3a73af279cfe/docs/exporter/example-exporter.list.md)****
 
 ## Exporter.getSelectedAutoExportParams
 
@@ -271,7 +279,7 @@ dronedeployApi.Exporter.getSelectedAutoExportParams()
 }
 ```
 
-[**Full Example**](https://github.com/ddbotgitbooksync/dronedeploy-apps-gitbook/tree/9b02b010aa57a342cc1b45bd18bfa3594dfdd5a8/exporter/example-exporter.getselectedautoexportparams.md)
+****[**Full Example**](https://github.com/ddbotgitbooksync/dronedeploy-apps-gitbook/blob/12543a9abbbd2e7d0c0b7159adbf3a73af279cfe/docs/exporter/example-exporter.getselectedautoexportparams.md)****
 
 ## Exporter.createAutoExport
 
@@ -316,13 +324,13 @@ dronedeployApi.Exporter.createAutoExport(folderEndpoint = 'https://fake-folder-e
 }
 ```
 
-[**Full Example**](https://github.com/ddbotgitbooksync/dronedeploy-apps-gitbook/tree/9b02b010aa57a342cc1b45bd18bfa3594dfdd5a8/exporter/example-exporter.createautoexport.md)
+****[**Full Example**](https://github.com/ddbotgitbooksync/dronedeploy-apps-gitbook/blob/12543a9abbbd2e7d0c0b7159adbf3a73af279cfe/docs/exporter/example-exporter.createautoexport.md)****
 
 ## Exporter.closePopup
 
 **Overview**
 
-Closes popup window with Auto Exports explorer and effectivelly stops the app that invoke this method.
+Closes popup window with Auto Exports explorer and effectively stops the app that invoke this method.
 
 **Example Call**
 
@@ -330,5 +338,30 @@ Closes popup window with Auto Exports explorer and effectivelly stops the app th
 dronedeployApi.Exporter.closePopup();
 ```
 
-[**Full Example**](https://github.com/ddbotgitbooksync/dronedeploy-apps-gitbook/tree/9b02b010aa57a342cc1b45bd18bfa3594dfdd5a8/exporter/example-exporter.closepopup.md)
+****[**Full Example**](https://github.com/ddbotgitbooksync/dronedeploy-apps-gitbook/blob/12543a9abbbd2e7d0c0b7159adbf3a73af279cfe/docs/exporter/example-exporter.closepopup.md)****
 
+## Exporter.get3DModelLink
+
+**Overview**
+
+Get link to 3D Model export
+
+**Example Call**
+
+```javascript
+const planId = '<plan_id>';
+dronedeployApi.Exporter.get3DModelLink(planId)
+```
+
+## Exporter.getPointCloudLink
+
+**Overview**
+
+Get link to Point Cloud export
+
+**Example Call**
+
+```javascript
+const planId = '<plan_id>';
+dronedeployApi.Exporter.getPointCloudLink(planId)
+```
