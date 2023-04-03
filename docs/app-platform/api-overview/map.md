@@ -4,14 +4,16 @@ What many developers think of as a map is known as a plan inside the API. Plans 
 
 The map api exposes methods for developers to interact with the map on the user's screen.
 
-* [Map.addImageOverlay](map.md#mapaddimageoverlay)
-* [Map.panTo](map.md#mappanto)
-* [Map.addTileLayer](map.md#mapaddtilelayer)
-* [Map.addPolygon](map.md#mapaddpolygon)
+* [Map.addImageOverlay](map.md#map.addimageoverlay)
+* [Map.panTo](map.md#map.panto)
+* [Map.addTileLayer](map.md#map.addtilelayer)
+* [Map.addPolygon](map.md#map.addpolygon)
+* [Map.addGeoJSON](map.md#map.addgeojson)
+* [Map.new](map.md#map.new)
 
-**Note:** You must _.subscribe\(\)_ to methods that draw onto the map. When unsubscribe is called the map changes will be removed.
+**Note:** You must _.subscribe()_ to methods that draw onto the map. When unsubscribe is called the map changes will be removed.
 
-```text
+```
 var sub = dronedeployApi.Map.addPolygon(latLng)
   .subscribe(() => {
     // This will remove your change from the map.
@@ -44,7 +46,7 @@ dronedeployApi.Map.addImageOverlay(imageUrl, bounds)
 });
 ```
 
-[**Full Example**](https://github.com/ddbotgitbooksync/dronedeploy-apps-gitbook/tree/c927048f33aac44c8e61d230dc43194aca71784c/map/map-api-example.md)
+[**Full Example**](https://github.com/dronedeploy/dronedeploy-apps-gitbook/blob/master/docs/map/map-api-example.md)
 
 ## Map.panTo
 
@@ -54,7 +56,7 @@ var optionalOptions = {zoom: 20};
 dronedeployApi.Map.panTo(location, optionalOptions);
 ```
 
-[**Full Example**](https://github.com/ddbotgitbooksync/dronedeploy-apps-gitbook/tree/c927048f33aac44c8e61d230dc43194aca71784c/map/map-api-example.md)
+[**Full Example**](https://github.com/dronedeploy/dronedeploy-apps-gitbook/blob/master/docs/map/map-api-example.md)
 
 ## Map.addTileLayer
 
@@ -95,7 +97,7 @@ dronedeployApi.Map.addtileLayer(urlTemplate, {
 });
 ```
 
-[**Full Example**](https://github.com/ddbotgitbooksync/dronedeploy-apps-gitbook/tree/c927048f33aac44c8e61d230dc43194aca71784c/map/map-api-example.md)
+[**Full Example**](https://github.com/dronedeploy/dronedeploy-apps-gitbook/blob/master/docs/map/map-api-example.md)
 
 ## Map.addPolygon
 
@@ -128,5 +130,60 @@ dronedeployApi.Map.addPolygon(latLngs, optionalOptions)
 });
 ```
 
-[**Full Example**](https://github.com/ddbotgitbooksync/dronedeploy-apps-gitbook/tree/c927048f33aac44c8e61d230dc43194aca71784c/map/map-api-example.md)
+[**Full Example**](https://github.com/dronedeploy/dronedeploy-apps-gitbook/blob/master/docs/map/map-api-example.md)
 
+## Map.addGeoJson
+
+**Overview**
+
+```javascript
+var geoJSON = { [name: string]: any };
+var styleCallback = function() {
+  console.log("styleCallback");
+}
+var filterCallback = function() {
+  console.log("filterCallback");
+}
+dronedeployApi.Map.addGeoJson(geoJSON, styleCallback, filterCallback)
+  .subscribe(function(geoJSONLayer){ console.log(geoJSONLayer) });
+```
+
+**Response**
+
+```javascript
+.subscribe(function(geoJSONLayer){
+  polygon.bringToBack();
+  polygon.bringToFront();
+  polygon.center()
+  polygon.hide();
+  polygon.remove();
+  polygon.show();
+});
+```
+
+[**Full Example**](https://github.com/dronedeploy/dronedeploy-apps-gitbook/blob/master/docs/map/map-api-example.md)
+
+## Map.new
+
+**Overview**
+
+```javascript
+var planId = string;
+var filesUrlsOrZipFile = [string, string[]];
+var callbackFunc = function(planId, filesUrlsOrZipFile) {
+  console.log("callbackFunc");
+}
+
+dronedeployApi.Map.new(callback, [planId, filesUrlsOrZipFile])
+  .subscribe(function(func){ });
+```
+
+**Response**
+
+```javascript
+.subscribe(function(response) {
+    console.log(response)
+});
+```
+
+[**Full Example**](https://github.com/dronedeploy/dronedeploy-apps-gitbook/blob/master/docs/map/map-api-example.md)
