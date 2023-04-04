@@ -6,18 +6,20 @@ A plan contains the flight data, drone data, image information, and the map asse
 
 **Contents**
 
-* [Plans.getCurrentlyViewed](plans.md#plansgetcurrentlyviewed)
-* [Plans.all](plans.md#plansall)
-* [Plans.update](plans.md#plansupdate)
+* [Plans.getCurrentlyViewed](plans.md#plans.getcurrentlyviewed)
+* [Plans.all](plans.md#plans.all)
+* [Plans.update](plans.md#plans.update)
 * [Plans.create](plans.md#planscreate)
+* [Plans.hideGeometry](plans.md#planscreate-1)
+* [Plans.showGeometry](plans.md#planscreate-2)
 
 ## Plans.getCurrentlyViewed
 
- **Overview** 
+&#x20;**Overview**&#x20;
 
-Returns the plan that is the currently visible to the user. For example, if the user is on the datapage the returned plan will be the plan they are looking at. The same applies for mapengine, planning, and the flight page.
+Returns the plan that is currently visible to the user. For example, if the user is on the Explore or Fly page, the returned plan will be the plan they are viewing.
 
- **Example Call** 
+&#x20;**Example Call**&#x20;
 
 ```javascript
 // Get the current one time
@@ -33,7 +35,7 @@ dronedeployApi.Plans.getCurrentlyViewed()
   });
 ```
 
- **Example Response** 
+&#x20;**Example Response**&#x20;
 
 ```javascript
 {
@@ -92,7 +94,7 @@ dronedeployApi.Plans.getCurrentlyViewed()
 }
 ```
 
- **plan.status** 
+&#x20;**plan.status**&#x20;
 
 * "new":  Before the plan has been flown
 * "queued":  Plan is waiting to be processed
@@ -100,17 +102,17 @@ dronedeployApi.Plans.getCurrentlyViewed()
 * "failed":  Plan failed during processing
 * "complete":  Plan has finished processing
 
-[**Full Example**](https://github.com/ddbotgitbooksync/dronedeploy-apps-gitbook/tree/c927048f33aac44c8e61d230dc43194aca71784c/plans/example-plans.getcurrentlyviewed.md)
+[**Full Example**](https://github.com/dronedeploy/dronedeploy-apps-gitbook/blob/master/docs/plans/example-plans.getcurrentlyviewed.md)
 
-[**Full Example - Get Area of Plan**](https://github.com/ddbotgitbooksync/dronedeploy-apps-gitbook/tree/c927048f33aac44c8e61d230dc43194aca71784c/plans/example-plans-get-area.md)
+[**Full Example - Get Area of Plan**](https://github.com/dronedeploy/dronedeploy-apps-gitbook/blob/master/docs/plans/example-plans-get-area.md)
 
 ## Plans.all
 
- **Overview** 
+&#x20;**Overview**&#x20;
 
-Get an array of all the users plans in memory. We store the 50 most recent and any plan a user loads in memory.
+Get an array of all the users plans in memory. We store the 50 most recent and any plan a user loads in memory. Optionally, there is the ability to get the plans paginated.&#x20;
 
- **Example Call** 
+&#x20;**Example Call**&#x20;
 
 ```javascript
 // Get all the users plan one time
@@ -124,9 +126,19 @@ dronedeployApi.Plans.all()
   .subscribe(function(plans){
     console.log(plans);
   });
+  
+// Paginated
+var paginated: boolean;
+var page: number;
+var status: string;
+
+dronedeployApi.Plans.all(paginated, page, status)
+  .then(function(plans){
+    console.log(plans);
+  });
 ```
 
- **Example Response** 
+&#x20;**Example Response**&#x20;
 
 ```javascript
 [
@@ -155,11 +167,11 @@ dronedeployApi.Plans.all()
 ]
 ```
 
-[**Full Example**](https://github.com/ddbotgitbooksync/dronedeploy-apps-gitbook/tree/c927048f33aac44c8e61d230dc43194aca71784c/plans/example-plans.all.md)
+[**Full Example**](https://github.com/dronedeploy/dronedeploy-apps-gitbook/blob/master/docs/plans/example-plans.all.md)
 
 ## Plans.update
 
- **Overview** 
+&#x20;**Overview**&#x20;
 
 Plans.update allows you to update specific fields within the flight plan model.
 
@@ -205,11 +217,11 @@ dronedeployApi.Plans.update(planIdToUpdate, fieldsToUpdate);
 
 **Note:** Save the plan's waypoints on the planning page to change the drones flight path manually. If you decide your app needs to alter waypoints, this is considered a privileged action and the user will be asked if they wish to allow it on a per plan basis.
 
-**Warning:** Waypoint changes may be overwritten my manual updates by the user to their flight geometry via the interactive map. Any waypoint changes should be in direct response to a [Plans.getCurrentlyViewed](https://www.gitbook.com/book/dronedeploy/dronedeploy-apps/edit#), and either ignore, or handle changes to geometry, based on what your app is trying to achieve. [Please see this example for an example.](https://github.com/ddbotgitbooksync/dronedeploy-apps-gitbook/tree/c927048f33aac44c8e61d230dc43194aca71784c/plans/example-plans.update-waypoints.md)
+**Warning:** Waypoint changes may be overwritten my manual updates by the user to their flight geometry via the interactive map. Any waypoint changes should be in direct response to a [Plans.getCurrentlyViewed](https://www.gitbook.com/book/dronedeploy/dronedeploy-apps/edit), and either ignore, or handle changes to geometry, based on what your app is trying to achieve. [Please see this example for an example.](https://github.com/ddbotgitbooksync/dronedeploy-apps-gitbook/tree/c927048f33aac44c8e61d230dc43194aca71784c/plans/example-plans.update-waypoints.md)
 
 **Warning:** Changing geometry will overwrite any changes to waypoints, by recalculating the optimal flight path as per DD's calculation code. [Please see this example for an example.](https://github.com/ddbotgitbooksync/dronedeploy-apps-gitbook/tree/c927048f33aac44c8e61d230dc43194aca71784c/plans/example-plans.update-waypoints.md)
 
- **Example Call** 
+&#x20;**Example Call**&#x20;
 
 ```javascript
 dronedeployApi.Plans.update('57e0761f21303e5214b6ae31', {
@@ -244,17 +256,17 @@ dronedeployApi.Plans.update('57e0761f21303e5214b6ae31', {
 });
 ```
 
-[**Full Example**](https://github.com/ddbotgitbooksync/dronedeploy-apps-gitbook/tree/c927048f33aac44c8e61d230dc43194aca71784c/plans/example-plans.update.md)
+[**Full Example**](https://github.com/dronedeploy/dronedeploy-apps-gitbook/blob/master/docs/plans/example-plans.update.md)
 
-[**Full Example - Change Waypoints**](https://github.com/ddbotgitbooksync/dronedeploy-apps-gitbook/tree/c927048f33aac44c8e61d230dc43194aca71784c/plans/example-plans.update-waypoints.md)
+[**Full Example - Change Waypoints**](https://github.com/dronedeploy/dronedeploy-apps-gitbook/blob/master/docs/plans/example-plans.update-waypoints.md)
 
-## Plans.create <a id="planscreate"></a>
+## Plans.create <a href="#planscreate" id="planscreate"></a>
 
- **Overview** 
+&#x20;**Overview**&#x20;
 
 Plans.create allows you to create a new plan with an array of coordinates and an options object.
 
- **Example Call** 
+&#x20;**Example Call**&#x20;
 
 ```javascript
 var geometry = [
@@ -273,4 +285,34 @@ dronedeploy.Plans.create(options)
 ```
 
 [**Full Example**](https://github.com/ddbotgitbooksync/dronedeploy-apps-gitbook/tree/c927048f33aac44c8e61d230dc43194aca71784c/plans/example-plans.create.md)
+
+## Plans.hideGeometry <a href="#planscreate" id="planscreate"></a>
+
+&#x20;**Overview**&#x20;
+
+Plans.hideGeometry hides the plans geometry.
+
+&#x20;**Example Call**&#x20;
+
+```javascript
+var planId = '1234';
+
+// Returns the id of the plan.
+dronedeploy.Plans.hideGeometry(planId);
+```
+
+## Plans.showGeometry <a href="#planscreate" id="planscreate"></a>
+
+&#x20;**Overview**&#x20;
+
+Plans.showGeometry shows the plans geometry.
+
+&#x20;**Example Call**&#x20;
+
+```javascript
+var planId = '1234';
+
+// Returns the id of the plan.
+dronedeploy.Plans.showGeometry(planId);
+```
 
