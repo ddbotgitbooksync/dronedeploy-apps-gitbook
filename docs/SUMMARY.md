@@ -58,6 +58,7 @@
   * [User](app-platform/api-overview/user.md)
   * [Map](app-platform/api-overview/map.md)
   * [Measurement](app-platform/api-overview/measurement.md)
+  * [Function](app-platform/api-overview/function.md)
 * [How to publish an App](app-platform/publishing\_app/README.md)
   * [Follow Checklist](app-platform/publishing\_app/checklist.md)
   * [Add Success Condition](app-platform/publishing\_app/success-condition.md)
