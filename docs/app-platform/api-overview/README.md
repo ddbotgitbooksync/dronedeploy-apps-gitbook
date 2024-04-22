@@ -2,7 +2,21 @@
 
 ## App Zones
 
-{% embed url="https://www.youtube.com/watch?v=gsBPcHuA8r8&index=2&list=PLqOge_z8yN2EJ4ftDaY1XdbaneCRQTnvq" %}
+App Zones are areas within DroneDeploy where your app's contents can be displayed.
+
+Here is a full list of available app zones within DroneDeploy:
+
+```yaml
+map-page: # DataOverview (Explore page)
+auto-exports-explorer: # AutoExportsExplorer
+project-files-explorer: # Overlays (modal)
+preflight-checklist-page: # Checklist
+exports-page: # Exporter
+organization-app-management-page: # OrgAppManagement
+flight-planning-page: # PlanningOverview
+project-settings-page: # ProjectSettings
+user-settings-page: # Settings
+```
 
 ## API Overview
 
